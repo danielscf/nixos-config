@@ -2,8 +2,8 @@
 
 {
   imports = [
-    # ./disk-configuration.nix
-    (import ./disk-configuration.nix { device = "/dev/sda"; })
+    ./disk-configuration.nix
+    # (import ./disk-configuration.nix { device = "/dev/sda"; })
 
     ./hardware-configuration.nix
 

@@ -35,7 +35,7 @@
       modules = [
         ./hosts/vm/configuration.nix
         inputs.home-manager.nixosModules.default
-        inputs.disko.nixosModules.default
+        inputs.disko.nixosModules.disko
       ];
     };
 

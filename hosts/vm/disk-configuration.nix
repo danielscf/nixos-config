@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }: 
-
+# { config, pkgs, lib, ... }:
 {
   disko.devices.disk.main = {
     type = "disk";
