@@ -26,7 +26,8 @@
   boot.loader = {
     grub = {
       enable = true;
-      device = "nodev";
+      device = "/dev/sda";
+      useOSProber = false;
       efiSupport = true;
     };
     efi.canTouchEfiVariables = true;
