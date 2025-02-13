@@ -3,9 +3,7 @@
 {
   imports = [
     ./disk-configuration.nix
-    # (import ./disk-configuration.nix { device = "/dev/sda"; })
-
-    ./hardware-configuration.nix
+    # ./hardware-configuration.nix
 
     inputs.home-manager.nixosModules.home-manager
   ];
