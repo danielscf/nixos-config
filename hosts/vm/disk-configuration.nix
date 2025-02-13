@@ -11,7 +11,6 @@
           type = "EF00";
           content = {
             type = "filesystem";
-            name = "boot";
             format = "vfat";
             mountpoint = "/boot";
             mountOptions = [ "umask=0077" ];
