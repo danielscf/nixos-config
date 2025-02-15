@@ -5,7 +5,7 @@
     ./disk-configuration.nix
     ./hardware-configuration.nix
 
-    # inputs.home-manager.nixosModules.home-manager
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -68,9 +68,6 @@
       enable = true;
       displayManager.lightdm.enable = true;
       desktopManager.xfce.enable = true;
-      # videoDrivers = [
-      #   "virtualbox"
-      # ];
     };
 
     pipewire = {
@@ -97,22 +94,22 @@
       wget
       git
       curl
-      # home-manager
+      home-manager
     ];
   };
 
   hardware.graphics.enable = true;
   
-  # home-manager = {
-  #   extraSpecialArgs = { inherit inputs; };
-  #   backupFileExtension = "bkp";
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    backupFileExtension = "bkp";
 
-  #   users.guest = {
-  #     imports = [
-  #       ./home.nix
-  #     ];
-  #   };
-  # };
+    users.guest = {
+      imports = [
+        ./home.nix
+      ];
+    };
+  };
 
   system.stateVersion = "24.11";
 }
