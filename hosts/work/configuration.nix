@@ -1,4 +1,3 @@
-
 { config, lib, pkgs, inputs, ... }:
 
 {
@@ -7,92 +6,42 @@
     ./disk-configuration.nix
     inputs.home-manager.nixosModules.home-manager
 
-    ../../modules/nixos/fonts.nix
+    ../../modules/nixos/system_config/fonts.nix
+    ../../modules/nixos/system_config/gc.nix
+    ../../modules/nixos/system_config/nix-ld.nix
+
+    ../../modules/nixos/audio/pipewire.nix
+
+    ../../modules/nixos/bootloader/grub.nix
+
+    ../../modules/nixos/display_manager/sddm.nix
+    
+    ../../modules/nixos/network/networkmanager.nix
+    ../../modules/nixos/network/dns.nix
+    ../../modules/nixos/network/firewall.nix
+
+    ../../modules/nixos/video_drivers/vm.nix
+
   ];
 
-  nixpkgs.config.allowUnfree = true;
-
-  nix = {
-    settings = {
-      auto-optimise-store = true;
-      experimental-features = [ "nix-command" "flakes" ];
-    };
-
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 7d";
-    };
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = (_: true);
   };
 
-  boot.loader = {
-    grub = {
-      enable = true;
-      device = "nodev";
-      useOSProber = false;
-      efiSupport = true;
-      enableCryptodisk = true;
-    };
-    efi.canTouchEfiVariables = true;
+  nix.settings = {
+    auto-optimise-store = true;
+    experimental-features = [ "nix-command" "flakes" ];
   };
 
-  networking = {
-    hostName = "nixos";
-
-    useDHCP = false;
-    dhcpcd.enable = false;
-
-    networkmanager = {
-      enable = true;
-      dns = "none";
-    };
-
-    nameservers = [
-      "1.1.1.1"
-      "1.0.0.1"
-      "2606:4700:4700::1111"
-      "2606:4700:4700::1001"
-
-      # "8.8.8.8"
-      # "8.8.4.4"
-      # "2001:4860:4860::8888"
-      # "2001:4860:4860::8844"
-    ];
-
-    firewall = {
-      enable = true;
-      # allowedTCPPorts = [ 80 443 ];
-      # allowedUDPPortRanges = [
-        # { from = 4000; to = 4007; }
-        # { from = 8000; to = 8010; }
-      # ];
-    };
-  };
+  networking.hostName = "nixos";
 
   security.polkit.enable = true;
   
   time.timeZone = "America/Lima";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services = {
-    # xserver = {
-      # enable = true;
-      # displayManager.lightdm.enable = true;
-      # desktopManager.xfce.enable = true;
-    # };
-
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
-
-    pipewire = {
-      enable = true;
-      pulse.enable = true;
-    };
-
-    libinput.enable = true;
-  };
+  services.libinput.enable = true;
 
   users.users.daniel = {
     isNormalUser = true;
@@ -118,7 +67,6 @@
       git
       curl
       tmux
-      snapper
       home-manager
 
       kitty
@@ -130,14 +78,6 @@
   };
 
   hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [
-    "vmware"
-  ];
-  
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-
-  ];
 
   programs.hyprland = {
     enable = true;
@@ -147,21 +87,26 @@
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
+
     backupFileExtension = "bkp";
+    useUserPackages = true;
+    useGlobalPkgs = true;
 
     users.daniel = {
       imports = [
         ./home.nix
-        ../../modules/home-manager/btop.nix
-        ../../modules/home-manager/yazi.nix
+        ../../modules/home-manager/cli_apps/btop.nix
+        ../../modules/home-manager/cli_apps/yazi.nix
 
-        ../../modules/home-manager/neovim.nix
+        ../../modules/home-manager/git/work.nix
+
+        ../../modules/home-manager/neovim/neovim.nix
 
         ../../modules/home-manager/hyprland/hyprland.nix
-        ../../modules/home-manager/firefox.nix
-        ../../modules/home-manager/rofi.nix
-        ../../modules/home-manager/kitty.nix
-        ../../modules/home-manager/foot.nix
+        ../../modules/home-manager/browser/firefox.nix
+        ../../modules/home-manager/app_launcher/rofi.nix
+        ../../modules/home-manager/terminal/kitty.nix
+        ../../modules/home-manager/terminal/foot.nix
 
         ../../modules/home-manager/shell/bash.nix
         ../../modules/home-manager/shell/nushell.nix
