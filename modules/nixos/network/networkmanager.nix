@@ -3,5 +3,5 @@
 {
   networking.networkmanager = {
     enable = true;
-  }
+  };
 }
