@@ -17,7 +17,7 @@
     unzip
     vlc
     zoom-us
-    swwww
+    swww
 
     nemo
     vscode
