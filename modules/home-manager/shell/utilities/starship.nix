@@ -11,8 +11,8 @@
       add_newline = false;
 
       character = { 
-        success_symbol = " ➜";
-        error_symbol = " ➜(bold red)";
+        success_symbol = "➜ ";
+        error_symbol = "➜(bold red) ";
       };
 
       line_break.disabled = false;
