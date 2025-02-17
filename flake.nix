@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    wsl = {
+      url = "github:nix-community/NixOS-WSL/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
+
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -42,13 +47,14 @@
       ];
     };
 
-    # nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
-    #   specialArgs = { inherit inputs; };
-    #   modules = [
-    #     ./hosts/wsl/configuration.nix
-    #     inputs.home-manager.nixosModules.default
-    #   ];
-    # };
+    nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      modules = [
+        ./hosts/wsl/configuration.nix
+        inputs.nixos-wsl.nixosModules.default
+        inputs.home-manager.nixosModules.default
+      ];
+    };
 
     # nixosConfigurations.oracle_vps = nixpkgs.lib.nixosSystem {
     #   specialArgs = { inherit inputs; };

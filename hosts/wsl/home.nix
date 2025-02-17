@@ -9,19 +9,9 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    cht-sh
-    cmatrix
     pass
-    udiskie
     unrar
     unzip
-    vlc
-    zoom-us
-    swww
-
-    nemo
-    vscode
-    firefox
   ];
 
   home.file = {
