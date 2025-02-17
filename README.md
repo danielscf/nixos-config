@@ -1,12 +1,19 @@
 # NixOs Configuration
 
-In emergency cases clone the repo
+## Non `disko-install` Setup
 
 ```sh
 git clone https://github.com/danielscf/nixos-config.git
+
+sudo nix --experimental-features 'nix-command' \
+run 'github:nix-community/disko' -- \
+--mode disko \
+./hosts/<host>/disk-configuration.nix
+
+nixos-install --flake .#<host>
 ```
 
-## Virtual machine setup
+## Virtual Machine Setup
 
 Check hardware configuration using
 
@@ -25,7 +32,7 @@ run 'github:nix-community/disko/latest#disko-install' -- \
 --mount-point /mnt 
 ```
 
-## Work setup
+## Work Setup
 
 Create the key for disk encryption
 
@@ -44,7 +51,7 @@ run 'github:nix-community/disko/latest#disko-install' -- \
 --mount-point /mnt 
 ```
 
-## WSL setup
+## WSL Setup
 
-## Oracle VPS setup
+## Oracle VPS Setup
 
