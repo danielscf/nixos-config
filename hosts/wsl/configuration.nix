@@ -2,7 +2,6 @@
 
 {
   imports = [
-    # <nixos-wsl/modules>
     inputs.home-manager.nixosModules.home-manager
 
     ../../modules/nixos/system_config/fonts.nix
@@ -29,6 +28,8 @@
     docker-desktop.enable = true;
     usbip.enable = false; # USB/IP Integration
   };
+
+  users.defaultUserShell = pkgs.nushell;
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
