@@ -26,8 +26,7 @@
           content = {
             type = "luks";
             name = "cryptroot";
-            # disable settings.keyFile if you want to use interactive password entry
-            #passwordFile = "/tmp/secret.key"; # Interactive
+            passwordFile = "/tmp/secret.key";
             # settings = {
             #   allowDiscards = true;
             #   keyFile = "/tmp/secret.key";
@@ -47,6 +46,7 @@
                     "space_cache=v2"
                   ];
                 };
+
                 "/@home" = {
                   mountpoint = "/home";
                   mountOptions = [ 
@@ -57,6 +57,7 @@
                     "space_cache=v2"
                   ];
                 };
+
                 "/@nix" = {
                   mountpoint = "/nix";
                   mountOptions = [ 
@@ -67,6 +68,7 @@
                     "space_cache=v2"
                   ];
                 };
+
                 "/@var_log" = {
                   mountpoint = "/var/log";
                   mountOptions = [ 
@@ -77,6 +79,7 @@
                     "space_cache=v2"
                   ];
                 };
+
                 "/@snapshots" = {
                   mountpoint = "/.snapshots";
                   mountOptions = [ 
@@ -87,6 +90,7 @@
                     "space_cache=v2"
                   ];
                 };
+
                 "/@swap" = {
                   mountpoint = "/swap";
                   swap.swapfile = {
@@ -94,6 +98,7 @@
                     path = "swapfile";
                   };
                 };
+
               };
             };
           };

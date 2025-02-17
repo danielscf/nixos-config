@@ -9,12 +9,12 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    # cht-sh
-    # cmatrix
-    # pass
-    # udiskie
+    cht-sh
+    cmatrix
+    pass
+    udiskie
     unrar
-    # unzip
+    unzip
 
     nemo
     vscode

@@ -3,7 +3,7 @@
     disk = {
       main = {
         type = "disk";
-        device = "/dev/vdb";
+        device = "/dev/sda";
         content = {
           type = "gpt";
           partitions = {
@@ -27,11 +27,9 @@
               size = "100%";
               content = {
                 type = "luks";
-                name = "crypted";
+                name = "cryptroot";
                 extraOpenArgs = [ ];
                 settings = {
-                  # if you want to use the key for interactive login be sure there is no trailing newline
-                  # for example use `echo -n "password" > /tmp/secret.key`
                   keyFile = "/tmp/secret.key";
                   allowDiscards = true;
                 };
