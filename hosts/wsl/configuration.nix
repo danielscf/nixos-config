@@ -57,7 +57,7 @@
         ../../modules/home-manager/shell/utilities/shell-utilities.nix
       ];
     };
-  }
+  };
 
   system.stateVersion = "24.11";
 }
