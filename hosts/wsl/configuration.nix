@@ -37,6 +37,15 @@
     shell = pkgs.nushell;
   };
 
+  console = {
+    earlySetup = true;
+    font = "JetbrainsMono NF";
+    packages = with pkgs; [ 
+      nerd-fonts.jetbrains-mono
+    ];
+    keyMap = "us";
+  };
+
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
 
