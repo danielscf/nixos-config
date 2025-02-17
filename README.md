@@ -47,5 +47,11 @@ run 'github:nix-community/disko/latest#disko-install' -- \
 
 ## WSL Setup
 
+Install nixos-wsl and run
+
+```sh
+sudo nixos-rebuild switch --flake 'github:danielscf/nixos-config#wsl'
+```
+
 ## Oracle VPS Setup
 
