@@ -95,18 +95,18 @@
     users.daniel = {
       imports = [
         ./home.nix
+
+        ../../modules/home-manager/app_launcher/rofi.nix
+        ../../modules/home-manager/browser/firefox.nix
+
         ../../modules/home-manager/cli_apps/btop.nix
         ../../modules/home-manager/cli_apps/yazi.nix
 
         ../../modules/home-manager/git/work.nix
-
-        ../../modules/home-manager/neovim/neovim.nix
-
         ../../modules/home-manager/hyprland/hyprland.nix
-        ../../modules/home-manager/browser/firefox.nix
-        ../../modules/home-manager/app_launcher/rofi.nix
-        ../../modules/home-manager/terminal/kitty.nix
-        ../../modules/home-manager/terminal/foot.nix
+        ../../modules/home-manager/neovim/neovim.nix
+        ../../modules/home-manager/notification_daemon/mako.nix
+        ../../modules/home-manager/osd/swayosd.nix
 
         ../../modules/home-manager/shell/bash.nix
         ../../modules/home-manager/shell/nushell.nix
@@ -114,7 +114,15 @@
         ../../modules/home-manager/shell/utilities/zoxide.nix
         ../../modules/home-manager/shell/utilities/carapace.nix
         ../../modules/home-manager/shell/utilities/starship.nix        
+        ../../modules/home-manager/shell/utilities/tmux.nix
         ../../modules/home-manager/shell/utilities/shell-utilities.nix
+
+        ../../modules/home-manager/status_bar/waybar.nix
+
+        ../../modules/home-manager/terminal/kitty.nix
+        ../../modules/home-manager/terminal/ghostty.nix
+        ../../modules/home-manager/terminal/foot.nix
+
       ];
     };
   };

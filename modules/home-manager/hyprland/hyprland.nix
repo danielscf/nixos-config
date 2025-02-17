@@ -8,6 +8,7 @@
 
     settings = {
       "monitor" = ",1920x1080,0x0,1";
+
       "$mainMod" = "SUPER";
 
       "$file_manager" = "nemo";
@@ -17,10 +18,13 @@
       "$browser" = "firefox";
 
       exec-once = [
+        "mako"
+        "udiskie"
+        "swww-daemon"
+        "swayosd-server"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
-
 
       bind = [
         "$mainMod, Q, killactive"
@@ -29,6 +33,10 @@
         "$mainMod, F, exec, $terminal1"
         "$mainMod, E, exec, $file_manager"
         "$mainMod, B, exec, $browser"
+      ];
+
+      env = [
+        "QT_QPA_PPLATFORM,wayland"
       ];
 
     };

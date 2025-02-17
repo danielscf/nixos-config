@@ -15,6 +15,9 @@
     udiskie
     unrar
     unzip
+    vlc
+    zoom-us
+    swwww
 
     nemo
     vscode

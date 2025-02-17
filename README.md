@@ -15,13 +15,7 @@ nixos-install --flake .#<host>
 
 ## Virtual Machine Setup
 
-Check hardware configuration using
-
-```sh
-sudo nixos-generate-config --root /tmp/config --no-filesystems
-```
-
-Install the whole system using
+Minimal setup with non-encrypted ext4 and xfce as desktop environment
 
 ```sh
 sudo nix --experimental-features "nix-command flakes" \
