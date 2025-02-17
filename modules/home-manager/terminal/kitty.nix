@@ -4,7 +4,7 @@
   programs.kitty = {
     enable = true;
     font.name = "JetbrainsMono NF";
-    font.size = "18";
+    font.size = 18;
     shellIntegration = {
       enableBashIntegration = true;
     };
