@@ -4,10 +4,8 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
 
-    ../../modules/nixos/system_config/fonts.nix
     ../../modules/nixos/system_config/gc.nix
     ../../modules/nixos/system_config/nix-ld.nix
-
   ];
 
   networking.hostName = "nixwsl";
@@ -35,15 +33,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ];
     shell = pkgs.nushell;
-  };
-
-  console = {
-    earlySetup = true;
-    font = "JetbrainsMono NF";
-    packages = with pkgs; [ 
-      nerd-fonts.jetbrains-mono
-    ];
-    keyMap = "us";
   };
 
   home-manager = {
