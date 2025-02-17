@@ -29,7 +29,13 @@
     usbip.enable = false; # USB/IP Integration
   };
 
-  users.defaultUserShell = pkgs.nushell;
+  users.defaultUserShell = pkgs.bash;
+
+  users.users.daniel = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "docker" ];
+    shell = pkgs.nushell;
+  };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
