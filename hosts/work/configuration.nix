@@ -6,6 +6,7 @@
     ./disk-configuration.nix
     inputs.home-manager.nixosModules.home-manager
 
+    ../../modules/nixos/system_config/unfree.nix
     ../../modules/nixos/system_config/fonts.nix
     ../../modules/nixos/system_config/gc.nix
     ../../modules/nixos/system_config/nix-ld.nix
@@ -22,12 +23,8 @@
 
     ../../modules/nixos/video_drivers/vm.nix
 
+    ../../modules/nixos/window_manager/hyprland.nix
   ];
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnfreePredicate = (_: true);
-  };
 
   nix.settings = {
     auto-optimise-store = true;
@@ -78,12 +75,6 @@
   };
 
   hardware.graphics.enable = true;
-
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
