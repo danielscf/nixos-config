@@ -26,6 +26,7 @@
           content = {
             type = "luks";
             name = "cryptroot";
+            settings.allowDiscards = true;
             passwordFile = "/tmp/secret.key";
             # settings = {
             #   allowDiscards = true;

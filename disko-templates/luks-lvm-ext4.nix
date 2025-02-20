@@ -26,14 +26,16 @@
             luks = {
               size = "100%";
               content = {
-                type = "luks2";
+                type = "luks";
                 name = "cryptroot";
                 extraOpenArgs = [ ];
-                settings = {
-                  keyFile = "/tmp/secret.key";
-                  allowDiscards = true;
-                };
-                additionalKeyFiles = [ "/tmp/additionalSecret.key" ];
+                passwordFile = "/tmp/secret.key";
+                settings.allowDiscards = true;
+                # settings = {
+                #   keyFile = "/tmp/secret.key";
+                #   allowDiscards = true;
+                # };
+                # additionalKeyFiles = [ "/tmp/additionalSecret.key" ];
                 content = {
                   type = "lvm_pv";
                   vg = "nixos-vg";
