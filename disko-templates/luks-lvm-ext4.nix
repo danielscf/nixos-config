@@ -26,7 +26,7 @@
             luks = {
               size = "100%";
               content = {
-                type = "luks";
+                type = "luks2";
                 name = "cryptroot";
                 extraOpenArgs = [ ];
                 settings = {
@@ -36,7 +36,7 @@
                 additionalKeyFiles = [ "/tmp/additionalSecret.key" ];
                 content = {
                   type = "lvm_pv";
-                  vg = "pool";
+                  vg = "nixos-vg";
                 };
               };
             };
@@ -47,9 +47,10 @@
     };
 
     lvm_vg = {
-      pool = {
+      nixos-vg = {
         type = "lvm_vg";
         lvs = {
+
           root = {
             size = "100%";
             content = {
@@ -62,24 +63,12 @@
             };
           };
 
-          home = {
-            size = "10M";
-            content = {
-              type = "filesystem";
-              format = "ext4";
-              mountpoint = "/home";
-            };
-          };
-
           swap = {
             size = "24G";
-          };
-
-          # TODO: swap partition
-
-          raw = {
-            size = "10M";
-          };
+            content = {
+              type = "swap";
+            }
+          }
 
         };
       };
