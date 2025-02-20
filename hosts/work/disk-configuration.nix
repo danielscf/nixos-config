@@ -58,7 +58,7 @@
             content = {
               type = "swap";
             }
-          }
+          };
 
         };
       };
