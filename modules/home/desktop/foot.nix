@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       main = {
-        font = "JetbrainsMono NF:size=18";
+        # font = "JetbrainsMono NF:size=18";
       };
     };
   };

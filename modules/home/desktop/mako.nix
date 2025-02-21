@@ -10,6 +10,6 @@
 
     anchor = "top-right";
     defaultTimeout = 8000;
-    font = "JetbrainsMono NF 11";
+    # font = "JetbrainsMono NF 11";
   };
 }
