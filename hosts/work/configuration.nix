@@ -17,7 +17,7 @@
     ../../modules/core/firewall.nix
     ../../modules/core/nvidia.nix
     ../../modules/core/hyprland.nix
-    ../../modules/core/xdg-userdirs.nix
+    ../../modules/core/xdg.nix
   ];
 
   nix.settings = {
