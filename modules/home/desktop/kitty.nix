@@ -1,11 +1,11 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.kitty = {
     enable = true;
 
     font = {
-      name = lib.mkForce "JetbrainsMono NF";
+      # name = lib.mkForce "JetbrainsMono NF";
       size = 18;
     };
 
