@@ -44,7 +44,7 @@
     ../../modules/home/desktop/mako.nix
     ../../modules/home/desktop/swayosd.nix
     ../../modules/home/desktop/hyprland.nix
-    ../../modules/home/desktop/xdg.nix
+    ../../modules/home/desktop/xdg-user-dirs.nix
 
     ../../modules/home/shell/bash.nix
     ../../modules/home/shell/nushell.nix
