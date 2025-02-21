@@ -3,7 +3,7 @@
 {
   stylix = {
     enable = true;
-    image = "./winter.png";
+    image = ./winter.png;
     polarity = "dark";
     targets = {
       gtk.enable = true;
