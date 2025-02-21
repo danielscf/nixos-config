@@ -12,6 +12,7 @@
       cht-sh
       cmatrix
       pass
+      udisks
       udiskie
       unrar
       unzip
