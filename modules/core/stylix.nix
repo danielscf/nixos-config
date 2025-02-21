@@ -3,7 +3,7 @@
 {
   stylix = {
     enable = true;
-    image = "/home/daniel/wallpapers/wallhaven-42kmd9_2560x1440.png";
+    image = "/home/daniel/wallpapers/winter.png";
     polarity = "dark";
     targets = {
       gtk.enable = true;
