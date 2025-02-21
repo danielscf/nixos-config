@@ -5,6 +5,7 @@
   # TODO: Ask if OSProber
   boot = {
     kernelParams = [
+      "quiet"
       "loglevel=3"
     ];
     loader = {
