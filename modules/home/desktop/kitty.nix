@@ -4,10 +4,10 @@
   programs.kitty = {
     enable = true;
 
-    font = {
+    # font = {
       # name = lib.mkForce "JetbrainsMono NF";
-      size = 18;
-    };
+      # size = 18;
+    # };
 
     settings = {
       confirm_os_window_close = 0;
