@@ -5,24 +5,19 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
 
-    ../../modules/nixos/system_config/unfree.nix
-    ../../modules/nixos/system_config/fonts.nix
-    ../../modules/nixos/system_config/gc.nix
-    ../../modules/nixos/system_config/nix-ld.nix
-
-    ../../modules/nixos/audio/pipewire.nix
-
-    ../../modules/nixos/bootloader/grub.nix
-
-    ../../modules/nixos/display_manager/sddm.nix
-    
-    ../../modules/nixos/network/networkmanager.nix
-    ../../modules/nixos/network/dns.nix
-    ../../modules/nixos/network/firewall.nix
-
-    ../../modules/nixos/video_drivers/vm.nix
-
-    ../../modules/nixos/window_manager/hyprland.nix
+    ../../modules/core/allowUnfree.nix
+    ../../modules/core/fonts.nix
+    ../../modules/core/gc.nix
+    ../../modules/core/nix-ld.nix
+    ../../modules/core/pipewire.nix
+    ../../modules/core/grub.nix
+    ../../modules/core/sddm.nix
+    ../../modules/core/networkmanager.nix
+    ../../modules/core/dns.nix
+    ../../modules/core/firewall.nix
+    ../../modules/core/nvidia.nix
+    ../../modules/core/hyprland.nix
+    ../../modules/core/xdg-userdirs.nix
   ];
 
   nix.settings = {
@@ -39,6 +34,8 @@
 
   services.libinput.enable = true;
 
+  users.defaultUserShell = pkgs.bash;
+
   users.users.daniel = {
     isNormalUser = true;
     initialPassword = "12345";
@@ -48,8 +45,6 @@
       tree
     ];
   };
-
-  users.defaultUserShell = pkgs.bash;
 
   environment = {
     sessionVariables = {
@@ -73,8 +68,6 @@
     ];
   };
 
-  hardware.graphics.enable = true;
-
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
 
@@ -86,32 +79,31 @@
       imports = [
         ./home.nix
 
-        ../../modules/home-manager/app_launcher/rofi.nix
-        ../../modules/home-manager/browser/firefox.nix
+        ../../modules/home/btop.nix
+        ../../modules/home/cmus.nix
+        ../../modules/home/fastfetch.nix
+        ../../modules/home/ncspot.nix
+        ../../modules/home/yt-dlp.nix
 
-        ../../modules/home-manager/cli_apps/btop.nix
-        ../../modules/home-manager/cli_apps/yazi.nix
+        ../../modules/home/desktop/rofi.nix
+        ../../modules/home/desktop/firefox.nix
+        ../../modules/home/desktop/waybar.nix
+        ../../modules/home/desktop/kitty.nix
+        ../../modules/home/desktop/ghostty.nix
+        ../../modules/home/desktop/foot.nix
+        ../../modules/home/desktop/mako.nix
+        ../../modules/home/desktop/swayosd.nix
+        ../../modules/home/desktop/hyprland.nix
 
-        ../../modules/home-manager/git/work.nix
-        ../../modules/home-manager/hyprland/hyprland.nix
-        ../../modules/home-manager/neovim/neovim.nix
-        ../../modules/home-manager/notification_daemon/mako.nix
-        ../../modules/home-manager/osd/swayosd.nix
-
-        ../../modules/home-manager/shell/bash.nix
-        ../../modules/home-manager/shell/nushell.nix
-
-        ../../modules/home-manager/shell/utilities/zoxide.nix
-        ../../modules/home-manager/shell/utilities/carapace.nix
-        ../../modules/home-manager/shell/utilities/starship.nix        
-        ../../modules/home-manager/shell/utilities/tmux.nix
-        ../../modules/home-manager/shell/utilities/shell-utilities.nix
-
-        ../../modules/home-manager/status_bar/waybar.nix
-
-        ../../modules/home-manager/terminal/kitty.nix
-        ../../modules/home-manager/terminal/ghostty.nix
-        ../../modules/home-manager/terminal/foot.nix
+        ../../modules/home/shell/bash.nix
+        ../../modules/home/shell/nushell.nix
+        ../../modules/home/shell/zoxide.nix
+        ../../modules/home/shell/yazi.nix
+        ../../modules/home/shell/carapace.nix
+        ../../modules/home/shell/starship.nix        
+        ../../modules/home/shell/tmux.nix
+        ../../modules/home/shell/git.nix
+        ../../modules/home/shell/neovim.nix
 
       ];
     };

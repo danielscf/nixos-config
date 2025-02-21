@@ -7,9 +7,9 @@
     grub = {
       enable = true;
       device = "nodev";
-      useOSProber = false;
+      useOSProber = true;
       efiSupport = true;
-      enableCryptodisk = true;
+      enableCryptodisk = false;
     };
     efi.canTouchEfiVariables = true;
   };
