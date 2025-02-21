@@ -4,7 +4,7 @@
   # TODO: Ask if encryption
   # TODO: Ask if OSProber
   boot = {
-    kernelParms = [
+    kernelParams = [
       "loglevel=3"
     ];
     loader = {
