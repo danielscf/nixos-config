@@ -41,9 +41,6 @@
     initialPassword = "12345";
     extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.nushell;
-    packages = with pkgs; [
-      tree
-    ];
   };
 
   environment = {
@@ -75,38 +72,7 @@
     useUserPackages = true;
     useGlobalPkgs = true;
 
-    users.daniel = {
-      imports = [
-        ./home.nix
-
-        ../../modules/home/btop.nix
-        ../../modules/home/cmus.nix
-        ../../modules/home/fastfetch.nix
-        ../../modules/home/ncspot.nix
-        ../../modules/home/yt-dlp.nix
-
-        ../../modules/home/desktop/rofi.nix
-        ../../modules/home/desktop/firefox.nix
-        ../../modules/home/desktop/waybar.nix
-        ../../modules/home/desktop/kitty.nix
-        ../../modules/home/desktop/ghostty.nix
-        ../../modules/home/desktop/foot.nix
-        ../../modules/home/desktop/mako.nix
-        ../../modules/home/desktop/swayosd.nix
-        ../../modules/home/desktop/hyprland.nix
-
-        ../../modules/home/shell/bash.nix
-        ../../modules/home/shell/nushell.nix
-        ../../modules/home/shell/zoxide.nix
-        ../../modules/home/shell/yazi.nix
-        ../../modules/home/shell/carapace.nix
-        ../../modules/home/shell/starship.nix        
-        ../../modules/home/shell/tmux.nix
-        ../../modules/home/shell/git.nix
-        ../../modules/home/shell/neovim.nix
-
-      ];
-    };
+    users.daniel = import ./home.nix;
   };
 
   system.stateVersion = "24.11";
