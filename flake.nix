@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL/main";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +37,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/work/configuration.nix
+        # inputs.stylix.nixosModules.default
         inputs.home-manager.nixosModules.default
       ];
     };
