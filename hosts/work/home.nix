@@ -11,6 +11,7 @@
     packages = with pkgs; [
       cht-sh
       cmatrix
+      ntfs3g
       pass
       udisks
       udiskie
