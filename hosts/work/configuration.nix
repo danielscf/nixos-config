@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    # ./disk-configuration.nix
     inputs.home-manager.nixosModules.home-manager
 
     ../../modules/nixos/system_config/unfree.nix
