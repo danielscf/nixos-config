@@ -20,6 +20,8 @@
       vlc
       zoom-us
       swww
+      discord
+      obsidian
 
       nemo
       vscode
