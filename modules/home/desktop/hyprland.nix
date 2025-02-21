@@ -31,6 +31,9 @@
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $file_manager"
         "$mainMod, B, exec, $browser"
+
+        "$mainMod, mouse_up, workspace, e-1"
+        "$mainMod, mouse_down, workspace, e+1"
       ];
 
       bindr = [
@@ -71,9 +74,6 @@
       ];
 
       bindm = [
-        "$mainMod, mouse_up, workspace, e-1"
-        "$mainMod, mouse_down, workspace, e+1"
-
 	"$mainMod, mouse:272, movewindow"
 	"$mainMod, mouse:273, resizewindow"
       ];
