@@ -18,6 +18,8 @@
     ../../modules/core/nvidia.nix
     ../../modules/core/hyprland.nix
     ../../modules/core/stylix.nix
+
+    ../../modules/home/shell/nvf.nix
   ];
 
   nix.settings = {
