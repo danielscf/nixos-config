@@ -28,7 +28,7 @@
         "udiskie &"
         "swww-daemon"
         "swayosd-server"
-	"waybar &"
+        "waybar &"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
@@ -41,44 +41,44 @@
 
       input = {
         kb_layout = "us,latam";
-	kb_options = "grp:win_space_toggle";
-	follow_mouse = 1;
-	touchpad.natural_scroll = "yes";
-	sensitivity = 0;
+        kb_options = "grp:win_space_toggle";
+        follow_mouse = 1;
+        touchpad.natural_scroll = "yes";
+        sensitivity = 0;
       };
  
       general = {
         layout = "hy3";
-	gaps_in = 5;
-	gaps_out = 30;
-	border_size = 0;
-	allow_tearing = false;
+        gaps_in = 5;
+        gaps_out = 30;
+        border_size = 0;
+        allow_tearing = false;
       };
 
       decoration = {
         rounding = 10;
 
-	blur = {
-	  enabled = true;
-	  size = 8;
-	  passes = 2;
-	  new_optimizations = true;
-	  ignore_opacity = true;
-	  noise = 0;
-	  brightness = 1;
-	};
+        blur = {
+          enabled = true;
+          size = 8;
+          passes = 2;
+          new_optimizations = true;
+          ignore_opacity = true;
+          noise = 0;
+          brightness = 1;
+        };
 
-	shadow = {
-	  enabled = true;
-	  range = 4;
-	  render_power = 3;
-	  # color = "rgba(1a1a1aee)";
-	};
+        shadow = {
+          enabled = true;
+              range = 4;
+          render_power = 3;
+          # color = "rgba(1a1a1aee)";
+        };
       };
 
       dwindle = {
         pseudotile = "yes";
-	preserve_split = "yes";
+        preserve_split = "yes";
       };
 
       gestures = {
@@ -87,10 +87,10 @@
 
       misc = {
         force_default_wallpaper = 0;
-	disable_hyprland_logo = true;
-	disable_splash_rendering = true;
-	disable_autoreload = false;
-	vrr = 1;
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
+        disable_autoreload = false;
+        vrr = 1;
       };
 
       "$mainMod" = "SUPER";
@@ -113,7 +113,7 @@
 
       bindr = [
         "CAPS, Caps_Lock, exec, swayosd-client --caps-lock"
-	"MOD2, Num_Lock, exec, swaposd-client --num-lock"
+        "MOD2, Num_Lock, exec, swaposd-client --num-lock"
       ];
 
       binde = [
@@ -125,35 +125,33 @@
         "$mainMod, XF86AudioRaiseVolume, exec, swayosd-client --brightness raise"
         "$mainMod, XF86AudioLowerVolume, exec, swayosd-client --brightness lower"
 
-	"$mainMod, 1, workspace, 1"
-	"$mainMod, 2, workspace, 2"
-	"$mainMod, 3, workspace, 3"
-	"$mainMod, 4, workspace, 4"
-	"$mainMod, 5, workspace, 5"
-	"$mainMod, 6, workspace, 6"
-	"$mainMod, 7, workspace, 7"
-	"$mainMod, 8, workspace, 8"
-	"$mainMod, 9, workspace, 9"
-	"$mainMod, 0, workspace, 10"
+        "$mainMod, 1, workspace, 1"
+        "$mainMod, 2, workspace, 2"
+        "$mainMod, 3, workspace, 3"
+        "$mainMod, 4, workspace, 4"
+        "$mainMod, 5, workspace, 5"
+        "$mainMod, 6, workspace, 6"
+        "$mainMod, 7, workspace, 7"
+        "$mainMod, 8, workspace, 8"
+        "$mainMod, 9, workspace, 9"
+        "$mainMod, 0, workspace, 10"
 
-	"$mainMod SHIFT, 1, movetoworkspacesilent, 1"
-	"$mainMod SHIFT, 2, movetoworkspacesilent, 2"
-	"$mainMod SHIFT, 3, movetoworkspacesilent, 3"
-	"$mainMod SHIFT, 4, movetoworkspacesilent, 4"
-	"$mainMod SHIFT, 5, movetoworkspacesilent, 5"
-	"$mainMod SHIFT, 6, movetoworkspacesilent, 6"
-	"$mainMod SHIFT, 7, movetoworkspacesilent, 7"
-	"$mainMod SHIFT, 8, movetoworkspacesilent, 8"
-	"$mainMod SHIFT, 9, movetoworkspacesilent, 9"
-	"$mainMod SHIFT, 0, movetoworkspacesilent, 10"
+        "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
+        "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
+        "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
+        "$mainMod SHIFT, 4, movetoworkspacesilent, 4"
+        "$mainMod SHIFT, 5, movetoworkspacesilent, 5"
+        "$mainMod SHIFT, 6, movetoworkspacesilent, 6"
+        "$mainMod SHIFT, 7, movetoworkspacesilent, 7"
+        "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
+        "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
+        "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
       ];
 
       bindm = [
-	"$mainMod, mouse:272, movewindow"
-	"$mainMod, mouse:273, resizewindow"
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
       ];
-
-
 
     };
   };
