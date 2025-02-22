@@ -5,9 +5,11 @@
 }: {
   stylix = {
     enable = true;
+    autoEnable = false;
+
     image = ./wall.png;
     polarity = "dark";
-    autoEnable = false;
+
     targets = {
       gtk.enable = true;
       qt.enable = true;
@@ -21,22 +23,22 @@
 
     fonts = {
       emoji = {
-        #package = "noto-fonts-emoji";
+        package = ${pkgs.noto-fonts-emoji};
         name = "Noto Emoji";
       };
 
       monospace = {
-        #package = "nerd-fonts.jetbrains-mono";
+        package = ${pkgs.nerd-fonts.jetbrains-mono};
         name = "JetBrainsMono NF";
       };
 
       sansSerif = {
-        #package = "noto-fonts";
+        package = ${pkgs.noto-fonts};
         name = "Noto Sans";
       };
 
       serif = {
-        #package = "noto-fonts";
+        package = ${pkgs.noto-fonts};
         name = "Noto Serif";
       };
 
