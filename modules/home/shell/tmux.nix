@@ -13,17 +13,17 @@
       tmuxPlugins.open
       tmuxPlugins.yank
       {
-          plugin = tmuxPlugins.vim-navigator
-      };
+          plugin = tmuxPlugins.vim-navigator;
+      }
       {
-          plugin = tmuxPlugins.resurrect
-      };
+          plugin = tmuxPlugins.resurrect;
+      }
       {
-          plugin = tmuxPlugins.continuum
-      };
+          plugin = tmuxPlugins.continuum;
+      }
       {
-          plugin = tmuxPlugins.fzf
-      };
+          plugin = tmuxPlugins.fzf;
+      }
     ];
 
     extraConfig = ''
