@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -18,14 +18,6 @@
         "$secondary_monitor,1366x768@60,auto-left,1,transform,1"
       ];
 
-
-      "$mainMod" = "SUPER";
-
-      "$file_manager" = "nemo";
-      "$terminal" = "kitty";
-      "$launcher" = "rofi -show drun";
-      "$browser" = "firefox";
-
       exec-once = [
         "mako"
         "udiskie &"
@@ -35,6 +27,30 @@
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
+
+      env = [
+        "QT_QPA_PPLATFORM,wayland"
+      ];
+
+      plugins = [
+        inputs.hy3.packages.${pkgs.stdenv.hostPlatform.system}.hy3
+      ];
+
+      input = {
+        kb_layout = "us,latam";
+	kb_options = "grp:win_space_toggle";
+	follow_mouse = 1;
+	touchpad.natural_scroll = "yes";
+	sensitivity = 0;
+      };
+
+
+      "$mainMod" = "SUPER";
+
+      "$file_manager" = "nemo";
+      "$terminal" = "kitty";
+      "$launcher" = "rofi -show drun";
+      "$browser" = "firefox";
 
       bind = [
         "$mainMod, Q, killactive"
@@ -89,19 +105,10 @@
 	"$mainMod, mouse:273, resizewindow"
       ];
 
-      env = [
-        "QT_QPA_PPLATFORM,wayland"
-      ];
-
-      input = {
-        kb_layout = "us,latam";
-	kb_options = "grp:win_space_toggle";
-	follow_mouse = 1;
-	touchpad.natural_scroll = "yes";
-	sensitivity = 0;
-      };
 
 
     };
   };
 }
+
+
