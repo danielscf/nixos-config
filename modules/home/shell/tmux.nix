@@ -14,16 +14,16 @@
       tmuxPlugins.yank
       {
           plugin = tmuxPlugins.vim-navigator
-      }
+      };
       {
           plugin = tmuxPlugins.resurrect
-      }
+      };
       {
           plugin = tmuxPlugins.continuum
-      }
+      };
       {
           plugin = tmuxPlugins.fzf
-      }
+      };
     ];
 
     extraConfig = ''
