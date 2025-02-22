@@ -19,7 +19,6 @@
     ../../modules/core/hyprland.nix
     ../../modules/core/stylix.nix
 
-    ../../modules/home/shell/nvf.nix
   ];
 
   nix.settings = {
@@ -53,6 +52,7 @@
     systemPackages = with pkgs; [
       man
       vim
+      neovim
       wget
       git
       curl

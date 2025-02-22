@@ -34,11 +34,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -48,7 +43,6 @@
       modules = [
         ./hosts/work/configuration.nix
         inputs.stylix.nixosModules.stylix
-	inputs.nvf.nixosModules.default
         inputs.home-manager.nixosModules.default
       ];
     };
