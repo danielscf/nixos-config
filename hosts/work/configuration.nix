@@ -58,6 +58,7 @@
       curl
       tmux
       home-manager
+      gcc
 
       kitty
       gtk3
