@@ -6,6 +6,10 @@
     package = null;
     portalPackage = null;
 
+    plugins = [
+      inputs.hy3.packages.x86_64-linux.hy3
+    ];
+
     settings = {
       "$primary_monitor" = "HDMI-A-1";
       "$secondary_monitor" = "DP-1";
@@ -30,10 +34,6 @@
 
       env = [
         "QT_QPA_PPLATFORM,wayland"
-      ];
-
-      plugins = [
-        inputs.hy3.packages.x86_64-linux.hy3
       ];
 
       input = {
