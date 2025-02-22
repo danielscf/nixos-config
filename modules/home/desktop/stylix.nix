@@ -12,7 +12,9 @@
 
     iconTheme = {
       enable = true;
-      package = "${pkgs.adwaita-icon-theme}";
+      package = "${pkgs.kora-icon-theme}";
+      dark = "kora";
+      light = "kora";
     };
   };
 }
