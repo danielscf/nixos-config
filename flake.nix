@@ -19,8 +19,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
+    hy3 = {
+      url = "github:outfoxxed/hy3";
       inputs.hyprland.follows = "hyprland";
     };
 

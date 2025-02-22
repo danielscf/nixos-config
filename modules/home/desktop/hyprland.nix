@@ -33,7 +33,7 @@
       ];
 
       plugins = [
-	inputs.hyprland-plugins.packages.x86_64-linux.hy3
+        inputs.hy3.packages.x86_64-linux.hy3
       ];
 
       input = {
