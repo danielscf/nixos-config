@@ -21,22 +21,22 @@
 
     fonts = {
       emoji = {
-        package = "noto-fonts-emoji";
+        #package = "noto-fonts-emoji";
         name = "Noto Emoji";
       };
 
       monospace = {
-        package = "nerd-fonts.jetbrains-mono";
+        #package = "nerd-fonts.jetbrains-mono";
         name = "JetBrainsMono NF";
       };
 
       sansSerif = {
-        package = "noto-fonts";
+        #package = "noto-fonts";
         name = "Noto Sans";
       };
 
       serif = {
-        package = "noto-fonts";
+        #package = "noto-fonts";
         name = "Noto Serif";
       };
 
