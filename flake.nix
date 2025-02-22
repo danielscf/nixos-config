@@ -49,7 +49,6 @@
         ./hosts/work/configuration.nix
         inputs.stylix.nixosModules.stylix
         inputs.home-manager.nixosModules.default
-        inputs.zen-browser.packages."${system}".twilight-official
       ];
     };
 
