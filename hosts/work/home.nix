@@ -1,6 +1,10 @@
-{ config, pkgs, lib, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   programs.home-manager.enable = true;
 
   home = {
@@ -56,7 +60,7 @@
     ../../modules/home/shell/zoxide.nix
     ../../modules/home/shell/yazi.nix
     ../../modules/home/shell/carapace.nix
-    ../../modules/home/shell/starship.nix        
+    ../../modules/home/shell/starship.nix
     ../../modules/home/shell/tmux.nix
     ../../modules/home/shell/git.nix
     ../../modules/home/shell/ripgrep.nix

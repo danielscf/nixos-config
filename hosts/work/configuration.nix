@@ -1,6 +1,10 @@
-{ config, lib, pkgs, inputs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
@@ -18,18 +22,17 @@
     ../../modules/core/nvidia.nix
     ../../modules/core/hyprland.nix
     ../../modules/core/stylix.nix
-
   ];
 
   nix.settings = {
     auto-optimise-store = true;
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = ["nix-command" "flakes"];
   };
 
   networking.hostName = "nixos";
 
   security.polkit.enable = true;
-  
+
   time.timeZone = "America/Lima";
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -40,7 +43,7 @@
   users.users.daniel = {
     isNormalUser = true;
     initialPassword = "12345";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = ["wheel" "networkmanager"];
     shell = pkgs.nushell;
   };
 
@@ -71,7 +74,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
 
     backupFileExtension = "bkp";
     useUserPackages = true;
