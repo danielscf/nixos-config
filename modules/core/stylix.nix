@@ -23,22 +23,22 @@
 
     fonts = {
       emoji = {
-        package = ${pkgs.noto-fonts-emoji};
+        package = {pkgs.noto-fonts-emoji};
         name = "Noto Emoji";
       };
 
       monospace = {
-        package = ${pkgs.nerd-fonts.jetbrains-mono};
+        package = {pkgs.nerd-fonts.jetbrains-mono};
         name = "JetBrainsMono NF";
       };
 
       sansSerif = {
-        package = ${pkgs.noto-fonts};
+        package = {pkgs.noto-fonts};
         name = "Noto Sans";
       };
 
       serif = {
-        package = ${pkgs.noto-fonts};
+        package = {pkgs.noto-fonts};
         name = "Noto Serif";
       };
 
