@@ -60,7 +60,6 @@
       home-manager
       gcc
       rustup
-      cargo
       python313
 
       kitty
