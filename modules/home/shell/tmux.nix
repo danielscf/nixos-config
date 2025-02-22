@@ -12,6 +12,7 @@
     plugins = with pkgs; [
       tmuxPlugins.open
       tmuxPlugins.yank
+
       {
           plugin = tmuxPlugins.vim-tmux-navigator;
       }
@@ -24,6 +25,7 @@
       {
           plugin = tmuxPlugins.tmux-fzf;
       }
+
     ];
 
     extraConfig = ''

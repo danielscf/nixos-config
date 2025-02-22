@@ -59,6 +59,8 @@
       tmux
       home-manager
       gcc
+      rustup
+      python313
 
       kitty
       gtk3
