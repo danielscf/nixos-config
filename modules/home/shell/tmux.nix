@@ -22,7 +22,7 @@
           plugin = tmuxPlugins.continuum;
       }
       {
-          plugin = tmuxPlugins.fzf;
+          plugin = tmuxPlugins.tmux-fzf;
       }
     ];
 
