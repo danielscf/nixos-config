@@ -3,9 +3,10 @@
 {
   programs.nvf = {
     enable = true;
-    viAlias = true;
 
     settings.vim = {
+      viAlias = true;
+
       lsp.enable = true;
       languages.nix.enable = true;
 
