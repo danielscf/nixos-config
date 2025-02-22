@@ -3,6 +3,7 @@
 {
   programs.nvf = {
     enable = true;
+    viAlias = true;
 
     settings.vim = {
       lsp.enable = true;
