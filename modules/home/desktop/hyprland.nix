@@ -43,7 +43,52 @@
 	touchpad.natural_scroll = "yes";
 	sensitivity = 0;
       };
+ 
+      general = {
+        layout = "hy3";
+	gaps_in = 5;
+	gaps_out = 30;
+	border_size = 0;
+	allow_tearing = false;
+      };
 
+      decoration = {
+        rounding = 10;
+
+	blur = {
+	  enabled = true;
+	  size = 8;
+	  passes 2;
+	  new_optimizations = true;
+	  ignore_opacity = true;
+	  noise = 0;
+	  brightness = 1;
+	};
+
+	shadow = {
+	  enabled = true;
+	  range = 4;
+	  render_power = 3;
+	  color = "rgba(1a1a1aee)";
+	};
+      };
+
+      dwindle = {
+        pseudotile = "yes";
+	preserve_split = "yes";
+      };
+
+      gestures = {
+        workspace_swipe = "off";
+      };
+
+      misc = {
+        force_default_wallpaper = 0;
+	disable_hyprland_logo = true;
+	disable_splash_rendering = true;
+	disable_autoreload = false;
+	vrr = 1;
+      };
 
       "$mainMod" = "SUPER";
 
