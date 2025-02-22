@@ -34,6 +34,8 @@
 
       env = [
         "QT_QPA_PPLATFORM,wayland"
+        "LIBVA_DRIVER_NAME,nvidia"
+        "__GLX_VENDORr_LIBRARY_NAME,nvidia"
       ];
 
       input = {
