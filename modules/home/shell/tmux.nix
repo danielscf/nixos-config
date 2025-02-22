@@ -8,13 +8,28 @@
     disableConfirmationPrompt = true;
     keyMode = "vi";
     prefix = "C-a";
-    # plugins = with pkgs; [
 
-    # ];
+    plugins = with pkgs; [
+      tmuxPlugins.open
+      tmuxPlugins.yank
+      {
+          plugin = tmuxPlugins.vim-navigator
+      }
+      {
+          plugin = tmuxPlugins.resurrect
+      }
+      {
+          plugin = tmuxPlugins.continuum
+      }
+      {
+          plugin = tmuxPlugins.fzf
+      }
+    ];
 
-    # extraConfig = ''
-    #   set -g set-clipboard on 
-    # '';
+    extraConfig = ''
+      set -g set-clipboard on 
+      set -g renumber-windows on
+    '';
 
   };
 }
