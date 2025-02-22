@@ -13,7 +13,7 @@
       tmuxPlugins.open
       tmuxPlugins.yank
       {
-          plugin = tmuxPlugins.navigator;
+          plugin = tmuxPlugins.vim-tmux-navigator;
       }
       {
           plugin = tmuxPlugins.resurrect;
