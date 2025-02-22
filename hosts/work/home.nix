@@ -25,7 +25,7 @@
 
       nemo
       vscode
-      inputs.zen-browser.packages."${system}".twilight-official
+      inputs.zen-browser.packages.x86_64-linux.twilight-official
     ];
 
     sessionVariables = {
