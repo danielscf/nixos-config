@@ -44,6 +44,7 @@
     ../../modules/home/ncspot.nix
     ../../modules/home/yt-dlp.nix
 
+    ../../modules/home/desktop/stylix.nix
     ../../modules/home/desktop/rofi.nix
     ../../modules/home/desktop/firefox.nix
     ../../modules/home/desktop/waybar.nix

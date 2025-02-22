@@ -13,13 +13,17 @@
     targets = {
       gtk.enable = true;
       qt.enable = true;
+
+      chromium.enable = true;
+      console.enable = true;
+      gnome.enable = true;
     };
 
-    #cursor = {
-    #package = "";
-    #name = "";
-    #size = "";
-    #};
+    cursor = {
+      package = "${pkgs.google-cursor}";
+      name = "Google cursor";
+      size = 12;
+    };
 
     fonts = {
       emoji = {
