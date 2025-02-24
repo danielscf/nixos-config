@@ -52,6 +52,7 @@
     ../../modules/home/desktop/foot.nix
     ../../modules/home/desktop/mako.nix
     ../../modules/home/desktop/udiskie.nix
+    ../../modules/home/desktop/udisks2.nix
     ../../modules/home/desktop/swayosd.nix
     ../../modules/home/desktop/hyprland.nix
     ../../modules/home/desktop/xdg-user-dirs.nix
