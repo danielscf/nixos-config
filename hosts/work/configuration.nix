@@ -22,6 +22,7 @@
     ../../modules/core/nvidia.nix
     ../../modules/core/hyprland.nix
     ../../modules/core/stylix.nix
+    ../../modules/core/gnupg.nix
   ];
 
   nix.settings = {
