@@ -4,16 +4,12 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
 
-    ../../modules/nixos/system_config/gc.nix
-    ../../modules/nixos/system_config/nix-ld.nix
+    ../../modules/core/allowUnfree.nix
+    ../../modules/core/gc.nix
+    ../../modules/core/nix-ld.nix
   ];
 
   networking.hostName = "nixwsl";
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnfreePredicate = (_: true);
-  };
 
   nix.settings = {
     auto-optimise-store = true;
@@ -42,26 +38,7 @@
     useUserPackages = true;
     useGlobalPkgs = true;
 
-    users.daniel = {
-      imports = [
-        ./home.nix
-
-        ../../modules/home-manager/cli_apps/btop.nix
-        ../../modules/home-manager/cli_apps/yazi.nix
-
-        ../../modules/home-manager/git/work.nix
-        ../../modules/home-manager/neovim/neovim.nix
-
-        ../../modules/home-manager/shell/bash.nix
-        ../../modules/home-manager/shell/nushell.nix
-
-        ../../modules/home-manager/shell/utilities/zoxide.nix
-        ../../modules/home-manager/shell/utilities/carapace.nix
-        ../../modules/home-manager/shell/utilities/starship.nix        
-        ../../modules/home-manager/shell/utilities/tmux.nix
-        ../../modules/home-manager/shell/utilities/shell-utilities.nix
-      ];
-    };
+    users.daniel = import ./home.nix;
   };
 
   system.stateVersion = "24.11";
