@@ -102,7 +102,7 @@
       "$file_manager" = "nemo";
       "$terminal" = "kitty";
       "$launcher" = "rofi -show drun";
-      "$browser" = "firefox";
+      "$browser" = "zen-beta";
 
       bind = [
         "$mainMod, Q, killactive"
