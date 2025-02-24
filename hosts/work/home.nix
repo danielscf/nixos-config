@@ -26,6 +26,7 @@
       discord
       obsidian
       pass
+      pavucontrol
 
       nemo
       vscode
