@@ -1,6 +1,10 @@
-{ config, pkgs, lib, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
@@ -17,8 +21,8 @@
 
       monitor = [
         ",preferred,auto,auto"
-        # "$laptop_monitor,disable"
-        "$laptop_monitor,1920x1080@144,0x0,1"
+        "$laptop_monitor,disable"
+        # "$laptop_monitor,1920x1080@144,0x0,1"
         "$primary_monitor,1920x1080@165,0x0,1"
         "$secondary_monitor,1366x768@60,auto-left,1,transform,1"
       ];
@@ -46,7 +50,7 @@
         touchpad.natural_scroll = "yes";
         sensitivity = 0;
       };
- 
+
       general = {
         layout = "hy3";
         gaps_in = 5;
@@ -70,7 +74,7 @@
 
         shadow = {
           enabled = true;
-              range = 4;
+          range = 4;
           render_power = 3;
           # color = "rgba(1a1a1aee)";
         };
@@ -152,9 +156,6 @@
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
-
     };
   };
 }
-
-
