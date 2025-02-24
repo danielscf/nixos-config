@@ -16,7 +16,6 @@
       cht-sh
       cmatrix
       ntfs3g
-      pass
       udisks
       udiskie
       unrar
@@ -26,6 +25,8 @@
       swww
       discord
       obsidian
+      gnupg
+      pass
 
       nemo
       vscode
