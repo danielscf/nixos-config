@@ -100,7 +100,7 @@
       "$mainMod" = "SUPER";
 
       "$file_manager" = "nemo";
-      "$terminal" = "kitty";
+      "$terminal" = "ghostty";
       "$launcher" = "rofi -show drun";
       "$browser" = "zen-beta";
 
