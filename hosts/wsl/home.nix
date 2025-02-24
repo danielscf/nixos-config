@@ -36,5 +36,5 @@
     ../../modules/home/shell/tmux.nix
     ../../modules/home/shell/git.nix
     ../../modules/home/shell/neovim.nix
-  ]
+  ];
 }
