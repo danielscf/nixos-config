@@ -1,9 +1,16 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   services.pipewire = {
     enable = true;
+
     pulse.enable = true;
-    # TODO: Add jack and alsa support
+    jack.enable = true;
+    alsa.enable = true;
+
+    audio.enable = true;
+    wireplumber.enable = true;
   };
 }
