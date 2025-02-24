@@ -23,6 +23,7 @@
     ../../modules/core/hyprland.nix
     ../../modules/core/stylix.nix
     ../../modules/core/gnupg.nix
+    ../../modules/core/udisks2.nix
   ];
 
   nix.settings = {
