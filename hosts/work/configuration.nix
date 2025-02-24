@@ -45,7 +45,11 @@
   users.users.daniel = {
     isNormalUser = true;
     initialPassword = "12345";
-    extraGroups = ["wheel" "networkmanager"];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "storage"
+    ];
     shell = pkgs.nushell;
   };
 
