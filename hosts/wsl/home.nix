@@ -9,9 +9,11 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    pass
     unrar
     unzip
+    gnupg
+
+    pass
   ];
 
   home.file = {
