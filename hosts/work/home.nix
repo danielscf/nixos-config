@@ -26,6 +26,7 @@
       discord
       obsidian
       gnupg
+      pinentry-tty
       pass
 
       nemo
