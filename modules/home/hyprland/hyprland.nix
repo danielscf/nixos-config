@@ -31,7 +31,7 @@
       "$file_manager" = "nemo";
       "$terminal" = "ghostty";
       "$launcher" = "rofi -show drun";
-      "$browser" = "zen-beta";
+      "$browser" = "zen";
 
       "$mainMod" = "SUPER";
 

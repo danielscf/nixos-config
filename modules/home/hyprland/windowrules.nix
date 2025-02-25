@@ -15,8 +15,8 @@
       # Transparent window exceptions
       "opacity 1 1,class:^(firefox)$,title:^(.*YouTube.*)$"
       "opacity 1 1,class:^(firefox)$,title:^(.*Twitch.*)$"
-      "opacity 1 1,class:^(zen-beta)$,title:^(.*YouTube.*)$"
-      "opacity 1 1,class:^(zen-beta)$,title:^(.*Twitch.*)$"
+      "opacity 1 1,class:^(zen)$,title:^(.*YouTube.*)$"
+      "opacity 1 1,class:^(zen)$,title:^(.*Twitch.*)$"
 
       # Float to tile window
       "tile,class:^(steam_proton)$"
@@ -24,13 +24,13 @@
       # Tile to float  window
       "float,class:^(firefox)$,title:^(Picture-in-Picture)$"
       "pin,class:^(firefox)$,title:^(Picture-in-Picture)$"
-      "float,class:^(zen-beta)$,title:^(Picture-in-Picture)$"
-      "pin,class:^(zen-beta)$,title:^(Picture-in-Picture)$"
+      "float,class:^(zen)$,title:^(Picture-in-Picture)$"
+      "pin,class:^(zen)$,title:^(Picture-in-Picture)$"
 
       # Default workspaces
       "workspace 1, class:^(vlc)$"
       "workspace 2, class:^(firefox)$"
-      "workspace 2, class:^(zen-beta)$"
+      "workspace 2, class:^(zen)$"
       "workspace 3, class:^(obsidian)$"
       #"workspace 4, class:^(Docker Desktop)$"
       #"workspace 5, class:^(Spotify)$"
