@@ -122,7 +122,7 @@
           format-on = " On";
           format-off = "";
           format-connected = " On ({num_connections})";
-          format-disabled = "";
+          format-disabled = "";
           on-click = "bluetoothctl power on";
           on-click-right = "bluetoothctl power off";
         };
