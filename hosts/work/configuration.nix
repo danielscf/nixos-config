@@ -26,6 +26,7 @@
     ../../modules/core/udisks2.nix
     ../../modules/core/playerctld.nix
     ../../modules/core/bluetooth.nix
+    ../../modules/core/blueman.nix
   ];
 
   nix.settings = {
