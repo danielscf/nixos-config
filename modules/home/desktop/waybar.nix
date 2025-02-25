@@ -42,6 +42,7 @@
             "class<Alacritty>" = "";
             "class<Foot>" = "";
             "class<Kitty>" = "";
+            "class<com.mitchellh.ghostty>" = "";
             "class<nemo>" = "";
             "class<firefox>" = "";
             "class<zen>" = "";
