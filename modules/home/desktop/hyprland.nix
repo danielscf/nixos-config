@@ -128,6 +128,11 @@
         vrr = 1;
       };
 
+      xwayland = {
+        use_nearest_neighbor = true;
+        force_zero_scaling = false;
+      };
+
       "$mainMod" = "SUPER";
 
       "$file_manager" = "nemo";
