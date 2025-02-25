@@ -181,5 +181,133 @@
         start_hidden = true;
       }
     ];
+
+    style = ''
+      * {
+        border: none;
+        border-radius: 0px;
+        font-family: JetBrainsMono NF;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      window#waybar {
+        background: transparent;
+      }
+
+      tooltip {
+        color: @foreground;
+        background: @color1;
+        border-radius: 10px;
+        border-color: @foreground;
+      }
+
+      #workspaces {
+        margin: 8px;
+      }
+
+      #workspaces button {
+        color: @background;
+        border-radius: 10px;
+        font-size: 16px;
+        background-color: @foreground;
+        padding: 5px 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 5px 2px;
+      }
+
+      #workspaces button.active {
+        color: @background;
+        background: @color1;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+      }
+
+      /* All components */
+      #mpris,
+      #tray,
+      #bluetooth,
+      #privacy,
+      #wireplumber,
+      #clock,
+      #network,
+      #language,
+      #battery,
+      #custom-power {
+        color: @background;
+        border-radius: 10px;
+        background: @foreground;
+        padding: 0px 10px;
+        margin: 8px 5px;
+      }
+
+      /* Component groups */
+      /* Group 1 */
+      #mpris {
+        color: @background;
+        background: @color7;
+        margin: 8px 0px;
+        margin-left: 2px;
+        margin-right: 5px;
+        padding: 0px 15px 0px 10px;
+      }
+
+      /* Group 2 */
+      #tray {
+        background: @color11;
+        margin: 8px 5px;
+      }
+
+      /* Group 3 */
+      #bluetooth,
+      #privacy,
+      #wireplumber {
+        background: @color4;
+        margin: 8px 0px;
+      }
+      #bluetooth {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+      #privacy {
+        border-radius: 0px;
+      }
+      #wireplumber {
+        margin: 8px 5px 8px 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+
+      /* Group 4 */
+      #clock {
+        background: @color2;
+        margin: 8px 5px;
+      }
+
+      /* Group 5 */
+      #network,
+      #language,
+      #battery {
+        background: @color6;
+        margin: 8px 0px;
+      }
+      #network {
+        margin: 8px 0px 8px 2px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+      #language {
+        border-radius: 0px;
+      }
+      #battery {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+
+      /* Group 6 */
+      #custom-power {
+        margin: 8px;
+        background: @color1;
+        padding-right: 13px;
+      }
+    '';
   };
 }
