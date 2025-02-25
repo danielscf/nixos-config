@@ -6,8 +6,8 @@
   ...
 }: {
   wayland.windowManager.hyprland.settings = {
-    # Open app if empty
     workspace = [
+      # Open app if empty
       "1,monitor:$primary_monitor,default:true"
       "2,monitor:$primary_monitor,default:true,on-created-empty:[dwindle] $browser"
       #"3,monitor:$secondary_monitor,default:true,on-created-empty:[dwindle] /home/daniel/scripts/script-aliases/obsidian-default-vault"
@@ -19,10 +19,8 @@
       "8,monitor:$primary_monitor,default:true,on-created-empty:[dwindle] discord"
       #"8,monitor:$primary_monitor,default:true,on-created-empty:[dwindle] whatsdesk"
       "10,monitor:$primary_monitor,default:true"
-    ];
 
-    # Secondary monitor gaps
-    workspace = [
+      # Secondary monitor gaps
       "3,monitor:$secondary_monitor,rounding:false,gapsin:0,gapsout:0"
       "5,monitor:$secondary_monitor,rounding:false,gapsin:0,gapsout:0"
       "6,monitor:$secondary_monitor,rounding:false,gapsin:0,gapsout:0"
