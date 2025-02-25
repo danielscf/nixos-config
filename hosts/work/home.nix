@@ -25,6 +25,7 @@
       obsidian
       pass
       pavucontrol
+      bottles
 
       nemo
       vscode
