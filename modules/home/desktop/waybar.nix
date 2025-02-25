@@ -27,7 +27,7 @@
           "network"
           "hyprland/language"
           "battery"
-          # "custom/power"
+          "custom/power"
         ];
 
         "hyprland/workspaces" = {
@@ -145,9 +145,10 @@
         };
 
         "custom/power" = {
-          format = "⏻";
+          format = " ⏻ ";
           on-click = "~/scripts/theme-wlogout";
         };
+
         "custom/theme" = {
           format = "󰌁";
           on-click = "~/scripts/theme-change";
@@ -197,10 +198,10 @@
       }
 
       tooltip {
-        color: @foreground;
-        background: @color1;
+        color: #${config.lib.stylix.colors.base01};
+        background: #${config.lib.stylix.colors.base05};
         border-radius: 10px;
-        border-color: @foreground;
+        border-color: #${config.lib.stylix.colors.base05};
       }
 
       #workspaces {
@@ -208,17 +209,17 @@
       }
 
       #workspaces button {
-        color: @background;
+        color: #${config.lib.stylix.colors.base00};
         border-radius: 10px;
         font-size: 16px;
-        background-color: @foreground;
+        background: #${config.lib.stylix.colors.base08};
         padding: 5px 20px;
         box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 5px 2px;
       }
 
       #workspaces button.active {
-        color: @background;
-        background: @color1;
+        color: #${config.lib.stylix.colors.base00};
+        background: #${config.lib.stylix.colors.base08};
         text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
       }
 
@@ -233,9 +234,9 @@
       #language,
       #battery,
       #custom-power {
-        color: @background;
+        color: #${config.lib.stylix.colors.base00};
         border-radius: 10px;
-        background: @foreground;
+        background: #${config.lib.stylix.colors.base08};
         padding: 0px 10px;
         margin: 8px 5px;
       }
@@ -243,8 +244,8 @@
       /* Component groups */
       /* Group 1 */
       #mpris {
-        color: @background;
-        background: @color7;
+        color: #${config.lib.stylix.colors.base00};
+        background: #${config.lib.stylix.colors.base06};
         margin: 8px 0px;
         margin-left: 2px;
         margin-right: 5px;
@@ -253,7 +254,7 @@
 
       /* Group 2 */
       #tray {
-        background: @color11;
+        background: #${config.lib.stylix.colors.base02};
         margin: 8px 5px;
       }
 
@@ -261,7 +262,7 @@
       #bluetooth,
       #privacy,
       #wireplumber {
-        background: @color4;
+        background: #${config.lib.stylix.colors.base04};
         margin: 8px 0px;
       }
       #bluetooth {
@@ -279,7 +280,7 @@
 
       /* Group 4 */
       #clock {
-        background: @color2;
+        background: #${config.lib.stylix.colors.base02};
         margin: 8px 5px;
       }
 
@@ -287,7 +288,7 @@
       #network,
       #language,
       #battery {
-        background: @color6;
+        background: #${config.lib.stylix.colors.base06};
         margin: 8px 0px;
       }
       #network {
@@ -306,7 +307,8 @@
       /* Group 6 */
       #custom-power {
         margin: 8px;
-        background: @color1;
+        background: #${config.lib.stylix.colors.base08};
+
         padding-right: 13px;
       }
     '';
