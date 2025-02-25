@@ -16,5 +16,9 @@
       dark = "kora";
       light = "kora";
     };
+
+    targets = {
+      tmux.enable = false;
+    };
   };
 }
