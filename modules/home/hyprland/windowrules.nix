@@ -10,7 +10,7 @@
       # Transparent windows
       #"opacity 0.85 0.85,class:^(Docker Desktop)$"
       "opacity 0.8 0.8,class:^(steam_proton|Spotify|VSCodium|Code|obsidian|nemo)$"
-      "opacity 0.7 0.7,class:^(Alacritty|kitty|com.mitchellh.ghostty)$"
+      "opacity 0.8 0.8,class:^(Alacritty|kitty|com.mitchellh.ghostty)$"
 
       # Transparent window exceptions
       "opacity 1 1,class:^(firefox)$,title:^(.*YouTube.*)$"
