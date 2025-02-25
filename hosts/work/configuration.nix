@@ -25,6 +25,7 @@
     ../../modules/core/gnupg.nix
     ../../modules/core/udisks2.nix
     ../../modules/core/playerctld.nix
+    ../../modules/core/bluetooth.nix
   ];
 
   nix.settings = {
