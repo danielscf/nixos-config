@@ -11,7 +11,7 @@
     prefix = "C-a";
     escapeTime = 0;
     mouse = true;
-    shell = "${pkgs.nushell}";
+    #shell = "${pkgs.nushell}";
     terminal = "tmux-256color";
     disableConfirmationPrompt = true;
 
