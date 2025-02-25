@@ -24,6 +24,7 @@
     ../../modules/core/stylix.nix
     ../../modules/core/gnupg.nix
     ../../modules/core/udisks2.nix
+    ../../modules/core/playerctld.nix
   ];
 
   nix.settings = {
