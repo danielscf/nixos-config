@@ -44,7 +44,7 @@
             "class<Kitty>" = "";
             "class<nemo>" = "";
             "class<firefox>" = "";
-            "class<zen-alpha>" = "";
+            "class<zen>" = "";
             "class<(Chromium)|(Chrome)>" = "";
             "class<discord>" = "";
             "class<whatsdesk>" = "";
