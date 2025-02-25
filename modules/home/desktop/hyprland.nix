@@ -107,6 +107,19 @@
         workspace_swipe = "off";
       };
 
+      device = [
+        {
+          name = "logitech-g-pro-gaming-mouse";
+          sensitivity = 0.4;
+          accel_profile = "flat";
+        }
+        {
+          name = "royuan-2.4g-wireless-mouse";
+          sensitivity = 0.4;
+          accel_profile = "flat";
+        }
+      ];
+
       misc = {
         force_default_wallpaper = 0;
         disable_hyprland_logo = true;
