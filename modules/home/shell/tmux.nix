@@ -62,7 +62,7 @@
     plugins = with pkgs; [
       tmuxPlugins.open
       tmuxPlugins.yank
-      tmuxPlugins.vim-tmux-navigator;
+      tmuxPlugins.vim-tmux-navigator
       {
         plugin = tmuxPlugins.resurrect;
         extraConfig = ''
