@@ -6,8 +6,8 @@
   ...
 }: {
   wayland.windowManager.hyprland.settings = {
-    # Basic keybinds
     bind = [
+      # Basic keybinds
       "$mainMod, Q, killactive,"
       "$mainMod, S, togglesplit,"
       "$mainMod, V, togglefloating,"
@@ -23,19 +23,17 @@
       #"$mainMod, X, exec, $scripts/theme-wlogout"
       "$mainMod, F1, exec, bluetoothctl power off"
       #"$mainMod, F2, exec, $scripts/script-aliases/bt-audio"
+
+      # Hyprshot
+      #", PRINT, exec, hyprshot -m output"
+      #"$mainMod, PRINT, exec, hyprshot -m region"
+      #"$shiftMod, PRINT, exec, hyprshot -m window"
     ];
 
     # Move/re-size windows with mainMod + LMB/RMB and dragging
     bindm = [
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
-    ];
-
-    # Hyprshot
-    bind = [
-      ", PRINT, exec, hyprshot -m output"
-      "$mainMod, PRINT, exec, hyprshot -m region"
-      "$shiftMod, PRINT, exec, hyprshot -m window"
     ];
 
     # Swayosd
@@ -45,16 +43,15 @@
     ];
 
     binde = [
+      # Swayosd
       ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise"
       ", XF86AudioLowerVolume, exec, swayosd-client --output-volume lower"
       ", XF86AudioMute, exec, swayosd-client --ouput-volume mute-toggle"
       "$mainMod, XF86AudioMute, exec, swayosd-client --input-volume mute-toggle"
       "$mainMod, XF86AudioLowerVolume, exec, swayosd-client --brightness lower"
       "$mainMod, XF86AudioRaiseVolume, exec, swayosd-client --brightness raise"
-    ];
 
-    # Window focus
-    binde = [
+      # Window focus
       "$mainMod, left, hy3:movefocus, l"
       "$mainMod, H, hy3:movefocus, l"
       "$mainMod, right, hy3:movefocus, r"
@@ -63,10 +60,8 @@
       "$mainMod, K, hy3:movefocus, u"
       "$mainMod, down, hy3:movefocus, d"
       "$mainMod, J, hy3:movefocus, d"
-    ];
 
-    # Window position
-    binde = [
+      # Window position
       "$mainMod SHIFT, left, hy3:movewindow, l"
       "$mainMod SHIFT, H, hy3:movewindow, l"
       "$mainMod SHIFT, right, hy3:movewindow, r"
@@ -75,10 +70,8 @@
       "$mainMod SHIFT, K, hy3:movewindow, u"
       "$mainMod SHIFT, down, hy3:movewindow, d"
       "$mainMod SHIFT, J, hy3:movewindow, d"
-    ];
 
-    # Re-size window
-    binde = [
+      # Re-size window
       "$mainMod ALT, left, resizeactive, -10 0"
       "$mainMod ALT, H, resizeactive, -10 0"
       "$mainMod ALT, right, resizeactive, 10 0"
@@ -87,10 +80,8 @@
       "$mainMod ALT, K, resizeactive, 0 -10"
       "$mainMod ALT, down, resizeactive, 0 10"
       "$mainMod ALT, J, resizeactive, 0 10"
-    ];
 
-    # Switch workspaces with mainMod + [0-9]
-    binde = [
+      # Switch workspaces with mainMod + [0-9]
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
@@ -101,10 +92,8 @@
       "$mainMod, 8, workspace, 8"
       "$mainMod, 9, workspace, 9"
       "$mainMod, 0, workspace, 10"
-    ];
 
-    # Move active window to a workspace with mainMod + SHIFT + [0-9]
-    binde = [
+      # Move active window to a workspace with mainMod + SHIFT + [0-9]
       "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
       "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
       "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
