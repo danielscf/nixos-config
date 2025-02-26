@@ -39,6 +39,7 @@
         full-border.enable = true;
         glow.enable = true;
         hide-preview.enable = true;
+        smart-filter.enable = true;
         relative-motions = {
           enable = true;
           show_numbers = "relative_absolute";
