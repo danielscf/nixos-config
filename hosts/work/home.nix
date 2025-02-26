@@ -25,7 +25,6 @@
       obsidian
       pass
       pavucontrol
-      glow
 
       # FIX: Add virtualization support
       bottles

@@ -6,6 +6,7 @@
 }: {
   # TODO: Replace with system variable
   # TODO: Evaluate if this import should be moved
+  # TODO: Create bookmark plugin
   imports = [
     (inputs.nix-yazi-plugins.legacyPackages.x86_64-linux.homeManagerModules.default)
   ];
@@ -30,6 +31,11 @@
 
     # initLua =
 
+    plugins = {
+      system-clipboard = inputs.nix-yazi-plugins.packages.x86_64-linux.system-clipboard;
+      ouch = inputs.nix-yazi-plugins.packages.x86_64-linux.ouch;
+    };
+
     yaziPlugins = {
       enable = true;
 
@@ -37,10 +43,8 @@
         starship.enable = true;
         chmod.enable = true;
         full-border.enable = true;
-        glow.enable = true;
         hide-preview.enable = true;
         smart-filter.enable = true;
-        system-clipboard.enable = true;
         relative-motions = {
           enable = true;
           show_numbers = "relative_absolute";
@@ -55,6 +59,10 @@
           on = ["g" "e"];
           run = "cd /run/media/daniel/EXTERNAL/";
           desc = "Go to external drive";
+        }
+        {
+          on = "<C-y>";
+          run = ["plugin system-clipboard"];
         }
       ];
     };
