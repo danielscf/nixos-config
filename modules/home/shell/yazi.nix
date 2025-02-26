@@ -40,6 +40,7 @@
         glow.enable = true;
         hide-preview.enable = true;
         smart-filter.enable = true;
+        system-clipboard.enable = true;
         relative-motions = {
           enable = true;
           show_numbers = "relative_absolute";
@@ -54,16 +55,6 @@
           on = ["g" "e"];
           run = "cd /run/media/daniel/EXTERNAL/";
           desc = "Go to external drive";
-        }
-        {
-          on = "y";
-          run = [
-            ''
-              'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
-            ''
-            "yank"
-          ];
-          desc = "Copy file to clipboard";
         }
       ];
     };
