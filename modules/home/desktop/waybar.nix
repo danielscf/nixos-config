@@ -130,7 +130,7 @@
         wireplumber = {
           format = "{icon} {volume}%";
           format-muted = " Muted";
-          scroll-step = 10;
+          scroll-step = 5;
           max-volume = 100;
           on-click = "pavucontrol";
           format-icons = {
