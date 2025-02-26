@@ -49,10 +49,12 @@
     self,
     nixpkgs,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    system = "x86_64-linux";
+  in {
     nixosConfigurations.work = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {inherit inputs;};
+      inherit system;
+      specialArgs = {inherit inputs system;};
       modules = [
         ./hosts/work/configuration.nix
         inputs.stylix.nixosModules.stylix

@@ -1,5 +1,6 @@
 {
   config,
+  system,
   pkgs,
   lib,
   inputs,
@@ -31,7 +32,7 @@
 
       nemo
       vscode
-      inputs.zen-browser.packages.x86_64-linux.beta
+      inputs.zen-browser.packages.${system}.beta
     ];
 
     sessionVariables = {

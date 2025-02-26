@@ -1,14 +1,17 @@
 {
   config,
   pkgs,
+  system,
   inputs,
   ...
-}: {
-  # TODO: Replace with system variable
+}: let
+  pluginsModule = inputs.nix-yazi-plugins.legacyPackages.${system}.homeManagerModules.default;
+  pluginsPkg = inputs.nix-yazi-plugins.packages.${system};
+in {
   # TODO: Evaluate if this import should be moved
   # TODO: Create bookmark plugin
   imports = [
-    (inputs.nix-yazi-plugins.legacyPackages.x86_64-linux.homeManagerModules.default)
+    pluginsModule
   ];
 
   programs.yazi = {
@@ -32,8 +35,8 @@
     # initLua =
 
     plugins = {
-      system-clipboard = inputs.nix-yazi-plugins.packages.x86_64-linux.system-clipboard;
-      ouch = inputs.nix-yazi-plugins.packages.x86_64-linux.ouch;
+      system-clipboard = pluginsPkg.system-clipboard;
+      ouch = pluginsPkg.ouch;
     };
 
     yaziPlugins = {

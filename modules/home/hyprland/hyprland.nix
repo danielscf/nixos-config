@@ -1,5 +1,6 @@
 {
   config,
+  system,
   pkgs,
   lib,
   inputs,
@@ -20,7 +21,7 @@
     portalPackage = null;
 
     plugins = [
-      inputs.hy3.packages.x86_64-linux.hy3
+      inputs.hy3.packages.${system}.hy3
     ];
 
     settings = {
