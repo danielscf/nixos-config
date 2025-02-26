@@ -4,6 +4,8 @@
   inputs,
   ...
 }: {
+  # TODO: Replace with system variable
+  # TODO: Evaluate if this import should be moved
   imports = [
     (inputs.nix-yazi-plugins.legacyPackages.x86_64-linux.homeManagerModules.default)
   ];
@@ -26,6 +28,22 @@
       };
     };
 
+    # initLua =
+
+    yaziPlugins = {
+      enable = true;
+
+      plugins = {
+        starship.enable = true;
+        chmod.enable = true;
+        relative-motions = {
+          enable = true;
+          show_numbers = "relative_absolute";
+          show_motion = true;
+        };
+      };
+    };
+
     keymap = {
       manager.append_keymap = [
         {
@@ -45,19 +63,5 @@
         }
       ];
     };
-    # plugins =
-
-    yaziPlugins = {
-      enable = true;
-      plugins = {
-        starship.enable = true;
-        relative-motions = {
-          enable = true;
-          show_numbers = "relative_absolute";
-          show_motion = true;
-        };
-      };
-    };
-    # initLua =
   };
 }
