@@ -55,6 +55,7 @@
     nixosConfigurations.work = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {inherit inputs system;};
+
       modules = [
         ./hosts/work/configuration.nix
         inputs.stylix.nixosModules.stylix
@@ -63,8 +64,9 @@
     };
 
     nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {inherit inputs;};
+      inherit system;
+      specialArgs = {inherit inputs system;};
+
       modules = [
         ./hosts/vm/configuration.nix
         inputs.disko.nixosModules.disko
@@ -73,8 +75,9 @@
     };
 
     nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {inherit inputs;};
+      inherit system;
+      specialArgs = {inherit inputs system;};
+
       modules = [
         ./hosts/wsl/configuration.nix
         inputs.nixos-wsl.nixosModules.default

@@ -64,6 +64,11 @@ in {
           desc = "Go to external drive";
         }
         {
+          on = ["g" "E"];
+          run = "cd /run/media/daniel/EXTERNAL/arch_bkp/dotfiles/.config";
+          desc = "Go to external drive dotfiles";
+        }
+        {
           on = "<C-y>";
           run = ["plugin system-clipboard"];
         }
