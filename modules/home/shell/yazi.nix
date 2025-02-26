@@ -1,6 +1,9 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.yazi = {
     enable = true;
 
@@ -19,9 +22,38 @@
       };
     };
 
-    # plugins = 
-    # initLua = 
-    # keymap = 
-    
+    keymap = {
+      manager.append_keymap = [
+        {
+          on = ["g" "e"];
+          run = "cd /run/media/daniel/EXTERNAL/";
+          desc = "Go to external drive";
+        }
+        {
+          on = "y";
+          run = [
+            ''
+              'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
+            ''
+            "yank"
+          ];
+          desc = "Copy file to clipboard";
+        }
+      ];
+    };
+    # plugins =
+
+    yaziPlugins = {
+      enable = true;
+      plugins = {
+        starship.enable = true;
+        relative-motions = {
+          enable = true;
+          show_numbers = "relative_absolute";
+          show_motion = true;
+        };
+      };
+    };
+    # initLua =
   };
 }

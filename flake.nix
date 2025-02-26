@@ -9,9 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    disko = { 
-      url = "github:nix-community/disko/master"; 
-      inputs.nixpkgs.follows = "nixpkgs"; 
+    disko = {
+      url = "github:nix-community/disko/master";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hyprland = {
@@ -39,22 +39,31 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    inputs.nix-yazi-plugins = {
+      url = "github:lordkekz/nix-yazi-plugins";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: {
     nixosConfigurations.work = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         ./hosts/work/configuration.nix
         inputs.stylix.nixosModules.stylix
+        inputs.nix-yazi-plugins.nixosModules.default
         inputs.home-manager.nixosModules.default
       ];
     };
 
     nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         ./hosts/vm/configuration.nix
         inputs.disko.nixosModules.disko
@@ -64,7 +73,7 @@
 
     nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         ./hosts/wsl/configuration.nix
         inputs.nixos-wsl.nixosModules.default
