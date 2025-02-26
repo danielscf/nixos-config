@@ -37,6 +37,7 @@
         starship.enable = true;
         chmod.enable = true;
         full-border.enable = true;
+        glow.enable = true;
         relative-motions = {
           enable = true;
           show_numbers = "relative_absolute";
