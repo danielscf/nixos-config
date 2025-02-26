@@ -56,7 +56,6 @@
       modules = [
         ./hosts/work/configuration.nix
         inputs.stylix.nixosModules.stylix
-        inputs.nix-yazi-plugins.nixosModules.default
         inputs.home-manager.nixosModules.default
       ];
     };
