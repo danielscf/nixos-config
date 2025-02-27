@@ -39,7 +39,12 @@
 
   security.polkit.enable = true;
 
-  time.timeZone = "America/Lima";
+  # TODO: Create module?
+  time = {
+    timeZone = "America/Lima";
+    hardwareClockInLocalTime = true;
+  };
+
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.libinput.enable = true;
