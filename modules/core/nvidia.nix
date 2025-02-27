@@ -52,6 +52,7 @@
       powerManagement.enable = true;
       powerManagement.finegrained = false;
       forceFullCompositionPipeline = true;
+      nvidiaPersistenced = true;
       # WARNING: This varies between hardware
       prime = {
         sync.enable = true;
