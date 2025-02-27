@@ -4,6 +4,7 @@
   ...
 }: {
   services.xserver.videoDrivers = ["nvidia"];
+  boot.kernelParams = ["module_blacklist=i915"];
 
   environment = {
     variables = {
@@ -26,13 +27,6 @@
       modesetting.enable = true;
       powerManagement.enable = false;
       powerManagement.finegrained = false;
-
-      # WARNING: This varies between hardware
-      prime = {
-        sync.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
 
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
