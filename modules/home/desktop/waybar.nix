@@ -48,7 +48,7 @@
             "class<zen>" = "";
             "class<(Chromium)|(Chrome)>" = "";
             "class<discord>" = "";
-            "class<whatsdesk>" = "";
+            "class<whatsie>" = "";
             "class<obsidian>" = "󱞁";
             "class<vlc>" = "󰕼";
             "class<Spotify>" = "";

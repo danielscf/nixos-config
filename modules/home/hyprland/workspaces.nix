@@ -17,7 +17,7 @@
       "6,monitor:$secondary_monitor,default:true,on-created-empty:[dwindle] pavucontrol"
       "7,monitor:$secondary_monitor,default:true,on-created-empty:[dwindle] $file_manager"
       "8,monitor:$primary_monitor,default:true,on-created-empty:[dwindle] discord"
-      #"8,monitor:$primary_monitor,default:true,on-created-empty:[dwindle] whatsdesk"
+      "8,monitor:$primary_monitor,default:true,on-created-empty:[dwindle] whatsie"
       "10,monitor:$primary_monitor,default:true"
 
       # Secondary monitor gaps

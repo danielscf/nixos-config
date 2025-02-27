@@ -38,7 +38,7 @@
       "workspace 6, class:^(pavucontrol)$"
       "workspace 7, class:^(nemo)$"
       "workspace 8, class:^(discord)$"
-      #"workspace 8, class:^(whatsdesk)$"
+      "workspace 8, class:^(whatsie)$"
     ];
   };
 }

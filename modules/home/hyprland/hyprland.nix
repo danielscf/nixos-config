@@ -51,7 +51,7 @@
         #"[workspace 4 silent] systemctl --user start docker-desktop"
         #"[workspace 5 silent] spotify-launcher"
         #"[workspace 5 silent] $scripts/script-aliases/foobar2000"
-        #"[workspace 8 silent] whatsdesk"
+        "[workspace 8 silent] whatsie"
         "[workspace 8 silent] discord"
       ];
 

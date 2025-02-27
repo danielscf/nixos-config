@@ -55,12 +55,14 @@
       powerManagement.finegrained = false;
       forceFullCompositionPipeline = true;
       nvidiaPersistenced = true;
-      # WARNING: This varies between hardware
+
       prime = {
         offload = {
           enable = true;
           enableOffloadCmd = true;
         };
+
+        # WARNING: This varies between hardware
         intelBusId = "PCI:0:0:2";
         nvidiaBusId = "PCI:0:1:0";
       };
