@@ -84,7 +84,7 @@
     ];
 
     cursor = {
-      no_hardware_cursor = 0;
+      no_hardware_cursors = 0;
       default_monitor = "HDMI-A-1";
     };
 
