@@ -4,7 +4,10 @@
   ...
 }: {
   services.xserver.videoDrivers = ["nvidia"];
-  #boot.kernelParams = ["module_blacklist=i915"];
+  boot = {
+    initrd.kernelModules = ["nvidia" "i915" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
+    kernelParams = ["nvidia-drm.fbdev=1"];
+  };
 
   environment = {
     variables = {
@@ -27,8 +30,8 @@
       modesetting.enable = true;
       powerManagement.enable = false;
       powerManagement.finegrained = false;
-      # WARNING: This varies between hardware
       forceFullCompositionPipeline = true;
+      # WARNING: This varies between hardware
       prime = {
         sync.enable = true;
         intelBusId = "PCI:0:0:2";
