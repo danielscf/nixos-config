@@ -1,9 +1,14 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver = {
+    enable = true;
+    videoDrivers = ["nvidia"];
+  };
+
   boot = {
     initrd.kernelModules = ["nvidia" "i915" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
     kernelParams = ["nvidia-drm.fbdev=1"];
