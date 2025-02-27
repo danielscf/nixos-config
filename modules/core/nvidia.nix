@@ -27,6 +27,12 @@
       powerManagement.enable = false;
       powerManagement.finegrained = false;
 
+      # WARNING: This varies between hardware
+      prime = {
+        intelBusId = "PCI:0:0:2";
+        nvidiaBusId = "PCI:0:1:0";
+      };
+
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
   };
