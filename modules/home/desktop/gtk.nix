@@ -17,9 +17,9 @@
     enable = true;
     gtk3.bookmarks = [
       "file:///home/daniel/Downloads"
-      "file:///home/daniel/Documents"
       "file:///home/daniel/Pictures"
       "file:///home/daniel/Videos"
+      "file:///home/daniel/Documents"
       "file:///run/media/daniel/EXTERNAL/"
       "file:///home/daniel/Videos/recording"
       "file:///home/daniel/Pictures/screenshots"

@@ -33,6 +33,7 @@
       youtube-music
       bottles
       glib
+      via
 
       nemo
       vscode
