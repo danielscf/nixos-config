@@ -31,8 +31,6 @@
       tenacity
       mupdf
       youtube-music
-
-      # FIX: Add virtualization support
       bottles
 
       nemo
