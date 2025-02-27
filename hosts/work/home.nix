@@ -29,6 +29,7 @@
       whatsie
       filezilla
       tenacity
+      mupdf
 
       # FIX: Add virtualization support
       bottles
@@ -62,6 +63,7 @@
     ../../modules/home/desktop/swayosd.nix
     ../../modules/home/desktop/xdg-user-dirs.nix
     ../../modules/home/desktop/gtk.nix
+    ../../modules/home/desktop/imv.nix
     ../../modules/home/desktop/obs-studio.nix
 
     ../../modules/home/hyprland/hyprland.nix
