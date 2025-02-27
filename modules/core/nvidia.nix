@@ -47,7 +47,7 @@
       open = true;
       nvidiaSettings = true;
       modesetting.enable = true;
-      powerManagement.enable = false;
+      powerManagement.enable = true;
       powerManagement.finegrained = false;
       forceFullCompositionPipeline = true;
       # WARNING: This varies between hardware
