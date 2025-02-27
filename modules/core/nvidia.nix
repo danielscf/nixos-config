@@ -13,6 +13,7 @@
     };
 
     systemPackages = with pkgs; [
+      lshw
       egl-wayland
     ];
   };
