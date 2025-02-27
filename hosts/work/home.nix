@@ -27,6 +27,7 @@
       pass
       pavucontrol
       whatsie
+      filezilla
 
       # FIX: Add virtualization support
       bottles
