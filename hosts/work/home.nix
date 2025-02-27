@@ -26,6 +26,7 @@
       obsidian
       pass
       pavucontrol
+      whatsie
 
       # FIX: Add virtualization support
       bottles
