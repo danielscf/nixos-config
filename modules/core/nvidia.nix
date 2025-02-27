@@ -29,6 +29,7 @@
 
       # WARNING: This varies between hardware
       prime = {
+        sync.enable = true;
         intelBusId = "PCI:0:0:2";
         nvidiaBusId = "PCI:0:1:0";
       };
