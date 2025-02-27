@@ -76,14 +76,10 @@
         "WLR_RENDERER_ALLOW_SOFTWARE=1"
         "WLR_RENDERER=vulkan"
         "__GL_VRR_ALLOWED,1"
-        "WLR_NO_HARDWARE_CURSORS,1"
-        "GBM_BACKEND,nvidia-drm"
-        "NVD_BACKEND,direct"
+
         "LIBVA_DRIVER_NAME,nvidia"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-        "__NV_PRIME_RENDER_OFFLOAD,1"
-        "__NV_PRIME_RENDER_OFFLOAD_PROVIDER,NVIDIA-G0"
-        "__VK_LAYER_NV_optimus,NVIDIA_only"
+        "NVD_BACKEND,direct"
       ];
     };
   };

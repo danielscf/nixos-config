@@ -83,6 +83,11 @@
       }
     ];
 
+    cursor = {
+      no_hardware_cursor = 0;
+      default_monitor = "HDMI-A-1";
+    };
+
     misc = {
       force_default_wallpaper = 0;
       disable_hyprland_logo = true;
