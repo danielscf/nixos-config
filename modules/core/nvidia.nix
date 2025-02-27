@@ -26,9 +26,13 @@
   environment = {
     variables = {
       GBM_BACKEND = "nvidia-drm";
+      NVD_BACKEND = "direct";
       LIBVA_DRIVER_NAME = "nvidia";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      NVD_BACKEND = "direct";
+      __NV_PRIME_RENDER_OFFLOAD = 1;
+      __NV_PRIME_RENDER_OFFLOAD_PROVIDER = "NVIDIA-G0";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      __VK_LAYER_NV_optimus = "NVIDIA_only";
     };
 
     systemPackages = with pkgs; [
@@ -55,7 +59,10 @@
       nvidiaPersistenced = true;
       # WARNING: This varies between hardware
       prime = {
-        sync.enable = true;
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
         intelBusId = "PCI:0:0:2";
         nvidiaBusId = "PCI:0:1:0";
       };
