@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.nushell = {
     enable = true;
 
@@ -21,7 +24,7 @@
       ll = "ls -l";
 
       re = "sudo nixos-rebuild switch --flake ~/nixos-config#default";
-      ru = "sudo nixos-rebuild swithc --upgrade-all --flake ~/nixos-config#default"
+      ru = "sudo nixos-rebuild swithc --upgrade-all --flake ~/nixos-config#default";
     };
 
     # TODO: Add path env vars
@@ -33,6 +36,6 @@
       TRANSIENT_PROMPT_MULTILINE_INDICATOR = lib.hm.nushell.mkNushellInline ''{|| "" }'';
       TRANSIENT_PROMPT_COMMAND_RIGHT = lib.hm.nushell.mkNushellInline ''{|| "" }'';
     };
-
   };
 }
+
