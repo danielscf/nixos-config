@@ -75,6 +75,7 @@
         "MOZ_ENABLE_WAYLAND,1"
         "WLR_RENDERER_ALLOW_SOFTWARE=1"
         "LIBVA_DRIVER_NAME,nvidia"
+        "NVD_BACKEND,direct"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         "__GL_VRR_ALLOWED,1"
         "WLR_NO_HARDWARE_CURSORS,1"
