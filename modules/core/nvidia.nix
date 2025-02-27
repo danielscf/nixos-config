@@ -5,10 +5,16 @@
 }: {
   services.xserver.videoDrivers = ["nvidia"];
 
-  environment.variables = {
-    GBM_BACKEND = "nvidia-drm";
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+  environment = {
+    variables = {
+      GBM_BACKEND = "nvidia-drm";
+      LIBVA_DRIVER_NAME = "nvidia";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    };
+
+    systemPackages = with pkgs; [
+      egl-wayland
+    ];
   };
 
   hardware = {
@@ -24,4 +30,3 @@
     };
   };
 }
-
