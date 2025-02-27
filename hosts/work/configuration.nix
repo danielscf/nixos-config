@@ -81,7 +81,6 @@
       python313
 
       kitty
-      gtk3
       xdg-user-dirs
       wl-clipboard
       cliphist
