@@ -34,7 +34,6 @@
     systemPackages = with pkgs; [
       lshw
       egl-wayland
-      nvidia-vaapi-driver
     ];
   };
 
@@ -42,6 +41,9 @@
     graphics = {
       enable = true;
       enable32Bit = true;
+      extraPackages = with pkgs; [
+        nvidia-vaapi-driver
+      ];
     };
     nvidia = {
       open = true;
