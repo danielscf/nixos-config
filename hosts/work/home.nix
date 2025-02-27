@@ -32,6 +32,7 @@
       mupdf
       youtube-music
       bottles
+      glib
 
       nemo
       vscode
