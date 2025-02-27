@@ -19,10 +19,9 @@
 
     shellAliases = {
       ll = "ls -l";
-      ga = "git add .";
-      gty = "git commit -m 'typo'";
 
       re = "sudo nixos-rebuild switch --flake ~/nixos-config#default";
+      ru = "sudo nixos-rebuild swithc --upgrade-all --flake ~/nixos-config#default"
     };
 
     # TODO: Add path env vars
