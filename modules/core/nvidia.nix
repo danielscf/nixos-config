@@ -31,8 +31,8 @@
       forceFullCompositionPipeline = true;
       prime = {
         sync.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
+        intelBusId = "PCI:0:0:2";
+        nvidiaBusId = "PCI:0:1:0";
       };
 
       package = config.boot.kernelPackages.nvidiaPackages.stable;
