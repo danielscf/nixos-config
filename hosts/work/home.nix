@@ -60,6 +60,7 @@
     ../../modules/home/desktop/swayosd.nix
     ../../modules/home/desktop/xdg-user-dirs.nix
     ../../modules/home/desktop/gtk.nix
+    ../../modules/home/desktop/obs-studio.nix
 
     ../../modules/home/hyprland/hyprland.nix
 
