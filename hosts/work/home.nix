@@ -34,6 +34,7 @@
       bottles
       glib
       via
+      hyprshot
 
       nemo
       vscode

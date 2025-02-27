@@ -25,9 +25,9 @@
       #"$mainMod, F2, exec, $scripts/script-aliases/bt-audio"
 
       # Hyprshot
-      #", PRINT, exec, hyprshot -m output"
-      #"$mainMod, PRINT, exec, hyprshot -m region"
-      #"$shiftMod, PRINT, exec, hyprshot -m window"
+      ", PRINT, exec, hyprshot -m output"
+      "$mainMod, PRINT, exec, hyprshot -m region"
+      "$shiftMod, PRINT, exec, hyprshot -m window"
     ];
 
     # Move/re-size windows with mainMod + LMB/RMB and dragging
