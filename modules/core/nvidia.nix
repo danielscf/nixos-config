@@ -1,19 +1,27 @@
-{ config, pkgs, ... }:
-
 {
-  hardware.graphics = {
-    enable = true;
+  config,
+  pkgs,
+  ...
+}: {
+  services.xserver.videoDrivers = ["nvidia"];
+
+  environment.variables = {
+    GBM_BACKEND = "nvidia-drm";
+    LIBVA_DRIVER_NAME = "nvidia";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware = {
+    graphics.enable = true;
+    nvidia = {
+      open = false;
+      nvidiaSettings = true;
+      modesetting.enable = true;
+      powerManagement.enable = false;
+      powerManagement.finegrained = false;
 
-  hardware.nvidia = {
-    open = false;
-    nvidiaSettings = true;
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
   };
 }
+
