@@ -28,6 +28,7 @@
       pavucontrol
       whatsie
       filezilla
+      tenacity
 
       # FIX: Add virtualization support
       bottles
