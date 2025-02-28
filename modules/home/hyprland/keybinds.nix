@@ -51,8 +51,8 @@
       ", XF86AudioLowerVolume, exec, swayosd-client --output-volume lower"
       ", XF86AudioMute, exec, swayosd-client --ouput-volume mute-toggle"
       "$mainMod, XF86AudioMute, exec, swayosd-client --input-volume mute-toggle"
-      "$mainMod, XF86AudioLowerVolume, exec, swayosd-client --brightness lower"
-      "$mainMod, XF86AudioRaiseVolume, exec, swayosd-client --brightness raise"
+      #"$mainMod, XF86AudioLowerVolume, exec, swayosd-client --brightness lower"
+      #"$mainMod, XF86AudioRaiseVolume, exec, swayosd-client --brightness raise"
 
       # Window focus
       "$mainMod, left, hy3:movefocus, l"
