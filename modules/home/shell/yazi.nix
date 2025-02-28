@@ -60,12 +60,12 @@ in {
       manager.append_keymap = [
         {
           on = ["g" "e"];
-          run = "cd /run/media/daniel/EXTERNAL/";
+          run = "cd /mnt/external";
           desc = "Go to external drive";
         }
         {
           on = ["g" "E"];
-          run = "cd /run/media/daniel/EXTERNAL/arch_bkp/dotfiles/.config";
+          run = "cd /mnt/external/arch_bkp/dotfiles/.config/";
           desc = "Go to external drive dotfiles";
         }
         {
