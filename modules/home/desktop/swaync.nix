@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  programs.swaync = {
+  services.swaync = {
     enable = true;
     settings = {};
     style = '''';
