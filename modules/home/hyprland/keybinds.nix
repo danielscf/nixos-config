@@ -24,6 +24,9 @@
       "$mainMod, F1, exec, bluetoothctl power off"
       #"$mainMod, F2, exec, $scripts/script-aliases/bt-audio"
 
+      # Swaync
+      "$mainMod, N, exec, swaync-client -t -sw"
+
       # Hyprshot
       ", PRINT, exec, hyprshot -m output"
       "$mainMod, PRINT, exec, hyprshot -m region"

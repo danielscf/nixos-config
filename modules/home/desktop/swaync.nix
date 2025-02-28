@@ -5,7 +5,10 @@
 }: {
   services.swaync = {
     enable = true;
-    settings = {};
-    style = '''';
+    settings = {
+      positionX = "right";
+      positionY = "top";
+    };
+    # style = '''';
   };
 }
