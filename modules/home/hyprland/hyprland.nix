@@ -46,12 +46,12 @@
         "wl-paste --type image --watch cliphist store"
 
         "[workspace 2 silent] $browser"
-        "[workspace 3 silent] obsidian"
+        "[workspace 3 silent] obsidian --disable-gpu"
         #"[workspace 3 silent] $scripts/script-aliases/obsidian-default-vault"
         #"[workspace 4 silent] systemctl --user start docker-desktop"
         "[workspace 5 silent] youtube-music"
         #"[workspace 5 silent] $scripts/script-aliases/foobar2000"
-        "[workspace 8 silent] whatsie"
+        #"[workspace 8 silent] whatsie"
         "[workspace 8 silent] discord"
       ];
 
