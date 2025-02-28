@@ -38,8 +38,7 @@
 
       exec-once = [
         # TODO: Replace with pkgs
-        "mako"
-        "udiskie &"
+        "swaync"
         "swww-daemon"
         "swayosd-server"
         "waybar &"
