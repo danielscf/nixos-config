@@ -35,6 +35,7 @@
       libnotify
       via
       hyprshot
+      obsidian
 
       nemo
       vscode
@@ -68,7 +69,6 @@
     ../../modules/home/desktop/qt.nix
     ../../modules/home/desktop/imv.nix
     ../../modules/home/desktop/obs-studio.nix
-    ../../modules/home/desktop/obsidian.nix
 
     ../../modules/home/hyprland/hyprland.nix
 
