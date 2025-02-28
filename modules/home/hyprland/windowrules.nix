@@ -9,7 +9,7 @@
     windowrulev2 = [
       # Transparent windows
       #"opacity 0.85 0.85,class:^(Docker Desktop)$"
-      "opacity 0.8 0.8,class:^(steam_proton|Spotify|VSCodium|Code|obsidian|nemo)$"
+      "opacity 0.8 0.8,class:^(steam_proton|Spotify|youtube-music|VSCodium|Code|obsidian|nemo)$"
       "opacity 0.8 0.8,class:^(Alacritty|kitty|com.mitchellh.ghostty)$"
 
       # Transparent window exceptions
@@ -33,7 +33,7 @@
       "workspace 2, class:^(zen)$"
       "workspace 3, class:^(obsidian)$"
       #"workspace 4, class:^(Docker Desktop)$"
-      #"workspace 5, class:^(Spotify)$"
+      "workspace 5, class:^(youtube-music)$"
       #"workspace 5, class:^(steam_proton)$"
       "workspace 6, class:^(pavucontrol)$"
       "workspace 7, class:^(nemo)$"
