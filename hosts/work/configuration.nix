@@ -29,6 +29,7 @@
     ../../modules/core/playerctld.nix
     ../../modules/core/bluetooth.nix
     ../../modules/core/blueman.nix
+    ../../modules/core/security.nix
   ];
 
   nix.settings = {
