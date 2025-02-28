@@ -85,6 +85,8 @@
 
     cursor = {
       no_hardware_cursors = 0;
+      enable_hyprcursor = false;
+      # TODO: Replace default monitor with variable
       default_monitor = "HDMI-A-1";
     };
 
