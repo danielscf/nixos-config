@@ -9,6 +9,7 @@
       ~/Pictures/wallpapers \
       ~/Videos/recording \
       ~/nixos-config \
+      ~/notes \
       ~/projects \
       ~/practice
   '';
@@ -25,6 +26,7 @@
       "file:///home/daniel/Pictures/screenshots"
       "file:///home/daniel/Pictures/wallpapers"
       "file:///home/daniel/nixos-config"
+      "file:///home/daniel/notes"
       "file:///home/daniel/projects"
       "file:///home/daniel/practice"
     ];
