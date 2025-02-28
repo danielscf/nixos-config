@@ -24,7 +24,7 @@
       ll = "ls -l";
 
       re = "sudo nixos-rebuild switch --flake ~/nixos-config#default";
-      ru = "sudo nixos-rebuild swithc --upgrade-all --flake ~/nixos-config#default";
+      ru = "sudo nixos-rebuild switch --upgrade-all --flake ~/nixos-config#default";
     };
 
     # TODO: Add path env vars
@@ -38,4 +38,3 @@
     };
   };
 }
-
