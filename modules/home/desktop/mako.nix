@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   services.mako = {
     enable = true;
 
@@ -10,6 +12,5 @@
 
     anchor = "top-right";
     defaultTimeout = 8000;
-    # font = "JetbrainsMono NF 11";
   };
 }
