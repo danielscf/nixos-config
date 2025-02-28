@@ -30,6 +30,7 @@
     ../../modules/core/bluetooth.nix
     ../../modules/core/blueman.nix
     ../../modules/core/security.nix
+    ../../modules/core/external_drive.nix
   ];
 
   nix.settings = {
