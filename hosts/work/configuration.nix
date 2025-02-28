@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
 
+    ../../modules/core/autoUpgrade.nix
     ../../modules/core/allowUnfree.nix
     ../../modules/core/fonts.nix
     ../../modules/core/gc.nix
