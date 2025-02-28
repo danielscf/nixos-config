@@ -59,6 +59,7 @@
       "wheel"
       "networkmanager"
       "storage"
+      "video"
     ];
     shell = pkgs.nushell;
   };
