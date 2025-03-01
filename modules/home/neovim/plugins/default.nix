@@ -1,5 +1,6 @@
 {
   imports = [
+    ./better-escape.nix
     ./oil.nix
     ./which-key.nix
     ./auto-session.nix
