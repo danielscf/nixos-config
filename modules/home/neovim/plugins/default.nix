@@ -8,5 +8,6 @@
     ./nvim-surround.nix
     ./vim-be-good.nix
     ./fugitive.nix
+    ./lsp.nix
   ];
 }
