@@ -11,6 +11,7 @@
     ./plugins/neoscroll.nix
     ./plugins/nvim-surround.nix
     ./plugins/vim-be-good.nix
+    ./plugins/fugitive.nix
   ];
 
   programs.nixvim = {
