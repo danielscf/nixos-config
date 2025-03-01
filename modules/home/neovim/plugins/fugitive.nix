@@ -6,11 +6,6 @@
 
   keymaps = [
     {
-      key = "-";
-      action = "<cmd>Oil<cr>";
-      mode = ["n"];
-    }
-    {
       key = "<leader>gs";
       action = "<cmd>vertical Git<cr>";
       mode = ["n"];
