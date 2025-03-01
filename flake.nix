@@ -43,6 +43,11 @@
       url = "github:lordkekz/nix-yazi-plugins";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -59,6 +64,7 @@
       modules = [
         ./hosts/work/configuration.nix
         inputs.stylix.nixosModules.stylix
+        inputs.nixvim.nixosModules.default
         inputs.home-manager.nixosModules.default
       ];
     };

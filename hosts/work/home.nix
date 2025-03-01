@@ -83,5 +83,7 @@
     ../../modules/home/shell/ripgrep.nix
     ../../modules/home/shell/fzf.nix
     # ../../modules/home/shell/neovim.nix
+
+    ../../modules/home/neovim/nixvim.nix
   ];
 }
