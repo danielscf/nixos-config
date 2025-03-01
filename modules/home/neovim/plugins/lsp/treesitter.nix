@@ -6,7 +6,7 @@
     autoLoad = true;
     folding = true;
 
-    nixGrammar = true;
+    nixGrammars = true;
     grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
 
     settings = {
