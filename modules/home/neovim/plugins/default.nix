@@ -10,6 +10,7 @@
     ./nvim-autopairs.nix
     ./vim-be-good.nix
     ./fugitive.nix
+    ./telescope.nix
 
     ./lsp/lsp.nix
     ./lsp/treesitter.nix
