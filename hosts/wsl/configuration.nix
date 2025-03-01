@@ -8,6 +8,7 @@
     ../../modules/core/allowUnfree.nix
     ../../modules/core/gc.nix
     ../../modules/core/nix-ld.nix
+    ../../modules/core/stylix.nix
   ];
 
   networking.hostName = "nixwsl";

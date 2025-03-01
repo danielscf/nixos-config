@@ -24,6 +24,7 @@
 
   imports = [
     ../../modules/home/desktop/xdg-user-dirs.nix
+    ../../modules/home/desktop/stylix.nix
 
     ../../modules/home/shell/btop.nix
     ../../modules/home/shell/fastfetch.nix
