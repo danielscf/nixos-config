@@ -44,7 +44,6 @@
       selection_caret = "  ";
       entry_prefix = "  ";
       set_env.colorterm = "truecolor";
-      color_devicons = true;
 
       layout_config = {
 	horizontal.prompt_position = "top";
