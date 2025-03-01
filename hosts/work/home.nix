@@ -48,12 +48,6 @@
   };
 
   imports = [
-    ../../modules/home/btop.nix
-    ../../modules/home/cmus.nix
-    ../../modules/home/fastfetch.nix
-    ../../modules/home/ncspot.nix
-    ../../modules/home/yt-dlp.nix
-
     ../../modules/home/desktop/stylix.nix
     ../../modules/home/desktop/rofi.nix
     ../../modules/home/desktop/firefox.nix
@@ -83,6 +77,12 @@
     ../../modules/home/shell/ripgrep.nix
     ../../modules/home/shell/fzf.nix
     ../../modules/home/shell/fd.nix
+    ../../modules/home/shell/btop.nix
+    ../../modules/home/shell/cmus.nix
+    ../../modules/home/shell/fastfetch.nix
+    ../../modules/home/shell/ncspot.nix
+    ../../modules/home/shell/yt-dlp.nix
+
 
     ../../modules/home/neovim/nixvim.nix
   ];
