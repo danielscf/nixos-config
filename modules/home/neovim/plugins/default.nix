@@ -10,6 +10,8 @@
     ./nvim-autopairs.nix
     ./vim-be-good.nix
     ./fugitive.nix
-    ./lsp.nix
+
+    ./lsp/lsp.nix
+    ./lsp/blink-cmp.nix
   ];
 }
