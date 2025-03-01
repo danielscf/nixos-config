@@ -64,7 +64,6 @@
       modules = [
         ./hosts/work/configuration.nix
         inputs.stylix.nixosModules.stylix
-        inputs.nixvim.nixosModules.default
         inputs.home-manager.nixosModules.default
       ];
     };
