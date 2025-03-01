@@ -115,7 +115,7 @@
           format-ethernet = "󰈀 Ethernet";
           format-linked = "{ifname} (No IP)  ";
           format-disconnected = " Disconnected";
-          on-click = "exec kitty -e nmtui-connect";
+          on-click = "exec nm-applet --indicator";
           tooltip-format-wifi = "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}";
         };
         bluetooth = {
