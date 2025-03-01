@@ -86,6 +86,7 @@
       modules = [
         ./hosts/wsl/configuration.nix
         inputs.nixos-wsl.nixosModules.default
+        inputs.stylix.nixosModules.stylix
         inputs.home-manager.nixosModules.default
       ];
     };
