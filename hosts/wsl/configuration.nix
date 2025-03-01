@@ -1,12 +1,14 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, system, lib, pkgs, inputs, ... }:
 
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
 
+    ../../modules/core/autoUpgrade.nix
     ../../modules/core/allowUnfree.nix
     ../../modules/core/gc.nix
     ../../modules/core/nix-ld.nix
+    ../../modules/core/stylix.nix
   ];
 
   networking.hostName = "nixwsl";
@@ -31,8 +33,22 @@
     shell = pkgs.nushell;
   };
 
+  environment.systemPackages = with pkgs; [
+    man
+    vim
+    wget
+    git
+    curl
+    tmux
+    home-manager
+    xdg-user-dirs
+
+    gcc
+    python313
+  ];
+
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs system; };
 
     backupFileExtension = "bkp";
     useUserPackages = true;
