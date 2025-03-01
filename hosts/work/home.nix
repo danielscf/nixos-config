@@ -82,7 +82,7 @@
     ../../modules/home/shell/git.nix
     ../../modules/home/shell/ripgrep.nix
     ../../modules/home/shell/fzf.nix
-    # ../../modules/home/shell/neovim.nix
+    ../../modules/home/shell/fd.nix
 
     ../../modules/home/neovim/nixvim.nix
   ];
