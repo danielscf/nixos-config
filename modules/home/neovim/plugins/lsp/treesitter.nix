@@ -1,7 +1,7 @@
 {pkgs, ... }:
 
 {
-  programs.nixvim.plugins.treesiter = {
+  programs.nixvim.plugins.treesitter = {
     enable = true;
     autoLoad = true;
     folding = true;

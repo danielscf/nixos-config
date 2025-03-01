@@ -12,7 +12,7 @@
     ./fugitive.nix
 
     ./lsp/lsp.nix
-    ./lsp/treesiter.nix
+    ./lsp/treesitter.nix
     ./lsp/blink-cmp.nix
   ];
 }
