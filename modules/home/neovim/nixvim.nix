@@ -41,7 +41,6 @@
       tmux-navigator = {
 	enable = true;
 	autoLoad = true;
-	lazyLoad.enable = false;
 	keymaps = [
 	  {
 	    action = "left";
