@@ -36,7 +36,6 @@
       via
       hyprshot
       obsidian
-      jetbrains.idea-ultimate
 
       nemo
       vscode
