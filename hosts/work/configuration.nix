@@ -66,30 +66,25 @@
     shell = pkgs.nushell;
   };
 
-  environment = {
-    sessionVariables = {
-      # NIXOS_OZONE_WL = "1";
-    };
+  environment.systemPackages = with pkgs; [
+    man
+    vim
+    wget
+    git
+    curl
+    tmux
+    home-manager
 
-    systemPackages = with pkgs; [
-      man
-      vim
-      neovim
-      wget
-      git
-      curl
-      tmux
-      home-manager
-      gcc
-      rustup
-      python313
+    gcc
+    rustup
+    python313
 
-      kitty
-      xdg-user-dirs
-      wl-clipboard
-      cliphist
-    ];
-  };
+    # TODO: Organize this packages on hyprland
+    kitty
+    xdg-user-dirs
+    wl-clipboard
+    cliphist
+  ];
 
   home-manager = {
     extraSpecialArgs = {inherit inputs system;};
