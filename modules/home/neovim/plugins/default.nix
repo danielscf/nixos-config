@@ -11,6 +11,7 @@
     ./vim-be-good.nix
     ./fugitive.nix
     ./telescope.nix
+    ./web-devicons.nix
 
     ./lsp/lsp.nix
     ./lsp/treesitter.nix

@@ -4,7 +4,7 @@
     autoLoad = true;
     settings = {
       delay = 500;
-      preset = "classic";
+      preset = "modern";
     };
   };
 }
