@@ -4,7 +4,6 @@
   programs.nixvim.plugins.treesitter = {
     enable = true;
     autoLoad = true;
-    folding = true;
 
     nixGrammars = true;
     grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
