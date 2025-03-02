@@ -1,4 +1,3 @@
-# {lib, pkgs, ... }:
 {
   programs.nixvim = {
     plugins.lsp = {
@@ -6,16 +5,12 @@
       autoLoad = true;
 
       capabilities = ''
-	capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)	
+        capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
       '';
 
       servers = {
-	nixd = {
-	  enable = true;
-	  # settings.formatting.command = [ (lib.getExe pkgs.nixfmt-rfc-style) ];
-	};
+        nixd.enable = true;
       };
     };
   };
 }
-

@@ -17,7 +17,7 @@
       htmldjango = ["djlint"];
 
       lua = ["selene"];
-      nix = ["nixd"];
+      nix = ["nix"];
     };
   };
 }
