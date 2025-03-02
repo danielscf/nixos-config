@@ -8,6 +8,7 @@
     ./neoscroll.nix
     ./harpoon.nix
     # ./lualine.nix
+    ./leap.nix
     ./nvim-surround.nix
     ./indent-blankline.nix
     ./nvim-autopairs.nix
