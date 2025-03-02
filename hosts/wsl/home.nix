@@ -13,6 +13,9 @@
       unzip
       gnupg
       glib
+      gcc
+      rustup
+      python313
 
       pass
     ];
