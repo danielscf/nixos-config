@@ -10,6 +10,7 @@
     # ./lualine.nix
     ./leap.nix
     ./trouble.nix
+    ./todo-comments.nix
     ./nvim-surround.nix
     ./indent-blankline.nix
     ./nvim-autopairs.nix
