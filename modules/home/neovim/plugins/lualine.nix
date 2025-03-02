@@ -2,6 +2,7 @@
   config,
   ...
 }: {
+  # TODO: Fix lualine theme
   programs.nixvim.plugins.lualine = {
     enable = true;
     autoLoad = true;
