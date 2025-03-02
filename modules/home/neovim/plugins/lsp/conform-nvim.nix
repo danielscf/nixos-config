@@ -1,5 +1,4 @@
 {lib, pkgs, ...}:
-
 {
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
@@ -27,8 +26,8 @@
       };
 
       formatters = {
-	nix = {
-	  command = lib.getExe pkgs.nixfmt;
+	nixfmt = {
+	  command = lib.getExe pkgs.nixfmt-rfc-style;
 	};
       };
       
