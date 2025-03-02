@@ -1,6 +1,4 @@
-{pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.nixvim.plugins.treesitter = {
     enable = true;
     autoLoad = true;
@@ -12,13 +10,13 @@
       highlight.enable = true;
       indent.enable = true;
       incremental_selection = {
-	enable = true;
-	keymaps = {
-	  init_selection = "<C-space>";
-	  node_decremental = "<C-space>";
-	  node_incremental = "<bs>";
-	  scope_incremental = false;
-	};
+        enable = true;
+        keymaps = {
+          init_selection = "<C-space>";
+          node_decremental = "<C-space>";
+          node_incremental = "<bs>";
+          scope_incremental = false;
+        };
       };
     };
   };
