@@ -6,6 +6,7 @@
     ./auto-session.nix
     ./tmux-navigator.nix
     ./neoscroll.nix
+    ./harpoon.nix
     # ./lualine.nix
     ./nvim-surround.nix
     ./nvim-autopairs.nix
