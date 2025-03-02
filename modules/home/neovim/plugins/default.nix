@@ -16,7 +16,8 @@
     ./web-devicons.nix
 
     ./lsp/lsp.nix
-    ./lsp/conform-nvim.nix
+    ./lsp/none-ls.nix
+    # ./lsp/conform-nvim.nix
     ./lsp/treesitter.nix
     ./lsp/blink-cmp.nix
   ];
