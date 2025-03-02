@@ -9,6 +9,7 @@
     ./harpoon.nix
     # ./lualine.nix
     ./leap.nix
+    ./trouble.nix
     ./nvim-surround.nix
     ./indent-blankline.nix
     ./nvim-autopairs.nix
