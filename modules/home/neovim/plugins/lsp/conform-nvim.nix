@@ -1,3 +1,5 @@
+{lib, pkgs, ...}:
+
 {
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
@@ -21,6 +23,13 @@
         lua =  [ "stylua" ];
         python =  [ "ruff_format" ];
         htmldjango =  [ "djlint" ];
+	nix = [ "nixfmt" ];
+      };
+
+      formatters = {
+	nix = {
+	  command = lib.getExe pkgs.nixfmt;
+	};
       };
       
       format_on_save = {
