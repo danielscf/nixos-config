@@ -20,7 +20,7 @@
         markdown = [ "prettierd" ];
         graphql = [ "prettierd" ];
         lua = [ "stylua" ];
-        python = [ "ruff_format" ];
+        python = [ "black" ];
         nix = [ "nixfmt" ];
       };
 
@@ -28,7 +28,7 @@
         shellcheck.command = lib.getExe pkgs.shellcheck;
         shellharden.command = lib.getExe pkgs.shellharden;
 	stylua.command = lib.getExe pkgs.stylua;
-	ruff_format.command = lib.getExe pkgs.ruff_format;
+	black.command = lib.getExe pkgs.black;
 	prettierd.command = lib.getExe pkgs.prettierd;
         nixfmt.command = lib.getExe pkgs.nixfmt-rfc-style;
       };
