@@ -10,6 +10,7 @@
     # ./lualine.nix
     ./marks.nix
     ./leap.nix
+    ./image.nix
     ./trouble.nix
     ./todo-comments.nix
     ./nvim-surround.nix
