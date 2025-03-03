@@ -8,6 +8,7 @@
     ./neoscroll.nix
     ./harpoon.nix
     # ./lualine.nix
+    ./dressing.nix
     ./marks.nix
     ./leap.nix
     ./image.nix

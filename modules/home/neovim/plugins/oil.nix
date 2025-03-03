@@ -4,18 +4,19 @@
       enable = true;
       autoLoad = true;
       settings = {
-	delete_to_trash = true;
-	default_file_explorer = true;
-	skip_confirm_for_simple_edits = true;
-	use_default_keymaps = true;
+        delete_to_trash = true;
+        default_file_explorer = true;
+        skip_confirm_for_simple_edits = true;
+        use_default_keymaps = true;
       };
     };
 
+    # TODO: Clear <C-J> and <C-h> keymaps
     keymaps = [
       {
         key = "-";
-	action = "<cmd>Oil<cr>";
-	mode = ["n"];
+        action = "<cmd>Oil<cr>";
+        mode = ["n"];
       }
     ];
   };

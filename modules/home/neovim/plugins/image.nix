@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugin.image = {
+  programs.nixvim.plugins.image = {
     enable = true;
     integrations.markdown.enabled = false;
   };
