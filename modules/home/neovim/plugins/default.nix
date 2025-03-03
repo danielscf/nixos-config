@@ -31,8 +31,9 @@
     ./lsp/lsp.nix
     ./lsp/lint.nix
     ./lsp/java.nix
+    ./lsp/blink-cmp.nix
     ./lsp/conform-nvim.nix
     ./lsp/treesitter.nix
-    ./lsp/blink-cmp.nix
+    ./lsp/vim-dadbod.nix
   ];
 }

@@ -11,7 +11,20 @@
         };
       };
       fuzzy.implementation = "prefer_rust";
-      signature.enabled = true;
+      signature.enable = true;
+
+      sources = {
+        default = ["lsp" "buffer" "snippets" "path"];
+        per_filetype = {
+          sql = ["snippets" "buffer" "dadbod"];
+        };
+        providers = {
+          dadbod = {
+            name = "Dadbod";
+            module = "vim_dadbod_completion.blink";
+          };
+        };
+      };
     };
   };
 }
