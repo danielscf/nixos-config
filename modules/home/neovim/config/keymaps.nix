@@ -3,7 +3,7 @@
     keymaps = [
       {
         key = ";";
-	action = ":";
+        action = ":";
       }
     ];
   };

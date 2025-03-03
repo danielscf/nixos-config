@@ -8,6 +8,7 @@
     ./neoscroll.nix
     ./harpoon.nix
     # ./lualine.nix
+    ./luasnip.nix
     ./dressing.nix
     ./marks.nix
     ./markdown-preview.nix
