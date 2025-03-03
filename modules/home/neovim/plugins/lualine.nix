@@ -58,7 +58,7 @@
             };
           }
         ];
-        lualine_c = [];
+        lualine_c = [""];
         lualine_x = ["searchcount"];
         lualine_y = [
           {
