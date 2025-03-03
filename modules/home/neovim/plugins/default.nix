@@ -17,6 +17,7 @@
     ./noice.nix
     ./leap.nix
     ./image.nix
+    ./obsidian.nix
     ./trouble.nix
     ./todo-comments.nix
     ./nvim-surround.nix
