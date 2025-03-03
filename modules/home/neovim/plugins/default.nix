@@ -29,6 +29,7 @@
 
     ./lsp/lsp.nix
     ./lsp/lint.nix
+    ./lsp/java.nix
     ./lsp/conform-nvim.nix
     ./lsp/treesitter.nix
     ./lsp/blink-cmp.nix
