@@ -11,6 +11,7 @@
     ./dressing.nix
     ./marks.nix
     ./markdown-preview.nix
+    ./notify.nix
     ./leap.nix
     ./image.nix
     ./trouble.nix
