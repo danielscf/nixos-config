@@ -8,8 +8,8 @@
     ./tmux-navigator.nix
     ./neoscroll.nix
     ./harpoon.nix
-    ./lualine.nix
     ./luasnip.nix
+    ./lualine.nix
     ./dressing.nix
     ./marks.nix
     ./markdown-preview.nix
