@@ -16,6 +16,7 @@
     ./mini.nix
     ./notify.nix
     ./noice.nix
+    ./nvim-autopairs.nix
     ./leap.nix
     ./image.nix
     ./obsidian.nix
