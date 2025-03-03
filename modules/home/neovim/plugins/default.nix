@@ -13,6 +13,7 @@
     ./marks.nix
     ./markdown-preview.nix
     ./notify.nix
+    ./noice.nix
     ./leap.nix
     ./image.nix
     ./trouble.nix
