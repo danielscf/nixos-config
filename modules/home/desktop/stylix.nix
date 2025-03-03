@@ -1,8 +1,13 @@
 {
-  config,
   pkgs,
+  lib,
   ...
 }: {
+  home.activation.ensureDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p ~/.config/colors/
+    touch ~/.config/colors/stylix.lua
+  '';
+
   stylix = {
     enable = true;
     autoEnable = true;
@@ -19,6 +24,11 @@
 
     targets = {
       tmux.enable = false;
+
+      nixvim = {
+        enable = true;
+        plugin = "mini.base16";
+      };
     };
   };
 }
