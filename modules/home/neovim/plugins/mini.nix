@@ -2,9 +2,9 @@
   programs.nixvim.plugins.mini = {
     enable = true;
 
-    # TODO: Indent scope removed animation
-    luaConfig.post = ''
+    luaConfig.pre = ''
       require("mini.ai").setup()
+      require("mini.pairs").setup()
       require("mini.surround").setup()
       require("mini.indentscope").setup()
     '';
