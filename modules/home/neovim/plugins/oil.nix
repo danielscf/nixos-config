@@ -8,10 +8,13 @@
         default_file_explorer = true;
         skip_confirm_for_simple_edits = true;
         use_default_keymaps = true;
+        keymaps = {
+          "<C-l>" = false;
+          "<C-h>" = false;
+        };
       };
     };
 
-    # TODO: Clear <C-J> and <C-h> keymaps
     keymaps = [
       {
         key = "-";
