@@ -2,7 +2,6 @@
   # TODO: Add cargo pkg dependency option
   programs.nixvim.plugins.blink-cmp = {
     enable = true;
-    autoLoad = true;
 
     settings = {
       completion = {
@@ -10,7 +9,7 @@
           auto_show = true;
         };
       };
-      fuzzy.implementation = "prefer_rust";
+      # fuzzy.implementation = "prefer_rust";
       signature.enable = true;
 
       sources = {

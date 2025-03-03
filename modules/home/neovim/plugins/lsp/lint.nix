@@ -1,7 +1,6 @@
 {
   programs.nixvim.plugins.lint = {
     enable = true;
-    autoLoad = true;
 
     lintersByFt = {
       javascript = ["eslint_d"];

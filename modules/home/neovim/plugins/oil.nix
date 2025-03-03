@@ -2,7 +2,7 @@
   programs.nixvim = {
     plugins.oil = {
       enable = true;
-      autoLoad = true;
+
       settings = {
         delete_to_trash = true;
         default_file_explorer = true;

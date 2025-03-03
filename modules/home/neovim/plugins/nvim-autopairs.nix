@@ -1,15 +1,15 @@
 {
   programs.nixvim.plugins.nvim-autopairs = {
     enable = true;
-    autoLoad = true;
+
     settings = {
       disable_filetype = [
-	"TelescopePrompt"
-	"vim"
+        "TelescopePrompt"
+        "vim"
       ];
       fast_wrap = {
-	end_key = "$";
-	map = "<M-e>";
+        end_key = "$";
+        map = "<M-e>";
       };
     };
   };

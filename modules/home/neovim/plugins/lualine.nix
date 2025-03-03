@@ -1,35 +1,32 @@
-{
-  config,
-  ...
-}: {
+{config, ...}: {
   # TODO: Fix lualine theme
   programs.nixvim.plugins.lualine = {
     enable = true;
-    autoLoad = true;
+
     settings = {
       extensions = [
-	"fugitive" 
-	"lazy"
-	"nvim-dap-ui"
-	"trouble"
+        "fugitive"
+        "lazy"
+        "nvim-dap-ui"
+        "trouble"
       ];
       options = {
         icons_enabled = true;
         theme = "auto";
-        component_separators = { 
-	  left = "";
-	  right = "";
-	};
-        section_separators = { 
-	  left = "";
-	  right = "";
-	};
-        disabled_filetypes = {
-          statusline =  [ "help" "lazy" "trouble" ]; 
-          tabline =  [ "help" "lazy" "trouble" ]; 
-          winbar =  [ "help" "lazy" "trouble" ]; 
+        component_separators = {
+          left = "";
+          right = "";
         };
-	ignore_focus =  [ "help" "lazy" "trouble" ]; 
+        section_separators = {
+          left = "";
+          right = "";
+        };
+        disabled_filetypes = {
+          statusline = ["help" "lazy" "trouble"];
+          tabline = ["help" "lazy" "trouble"];
+          winbar = ["help" "lazy" "trouble"];
+        };
+        ignore_focus = ["help" "lazy" "trouble"];
         always_divide_middle = true;
         globalstatus = true;
         refresh = {
@@ -45,10 +42,10 @@
             _unkeyed-1 = "filetype";
             colored = true;
             icon_only = true;
-            padding = { 
-	      left = 1;
-	      right = 0;
-	    };
+            padding = {
+              left = 1;
+              right = 0;
+            };
             color = {
               fg = "${config.lib.stylix.colors.base06}";
               bg = "${config.lib.stylix.colors.base00}";
@@ -94,7 +91,7 @@
           #   cond = require("noice").api.statusline.mode.has,
           #   color = require("lualine.themes.lushwal").normal.fg,
           # }
-	];
+        ];
         lualine_y = [
           {
             _unkeyed-1 = "diff";

@@ -2,7 +2,6 @@
   programs.nixvim = {
     plugins.treesitter = {
       enable = true;
-      autoLoad = true;
 
       nixGrammars = true;
       grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;

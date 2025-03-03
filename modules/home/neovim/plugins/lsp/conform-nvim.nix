@@ -5,7 +5,7 @@
 }: {
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
-    autoLoad = true;
+
     settings = {
       formatters_by_ft = {
         bash = ["shellcheck"];
