@@ -21,8 +21,8 @@
     ./obsidian.nix
     ./trouble.nix
     ./todo-comments.nix
-    ./nvim-surround.nix
-    ./indent-blankline.nix
+    # ./nvim-surround.nix
+    # ./indent-blankline.nix
     ./nvim-autopairs.nix
     ./vim-be-good.nix
     ./fugitive.nix
