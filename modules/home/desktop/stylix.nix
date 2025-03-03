@@ -1,13 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
-  home.activation.nixvimDirTheme = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    mkdir -p ~/.config/nvim/colors/
-    touch ~/.config/nvim/colors/stylix.lua
-  '';
-
+{pkgs, ...}: {
   stylix = {
     enable = true;
     autoEnable = true;
@@ -27,7 +18,7 @@
 
       nixvim = {
         enable = true;
-        plugin = "mini.base16";
+        plugin = "base16-nvim";
       };
     };
   };
