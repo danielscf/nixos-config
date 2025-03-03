@@ -8,6 +8,7 @@
     ./neoscroll.nix
     ./harpoon.nix
     # ./lualine.nix
+    ./marks.nix
     ./leap.nix
     ./trouble.nix
     ./todo-comments.nix
