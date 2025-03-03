@@ -8,7 +8,7 @@
     withRuby = true;
 
     globals = {
-      mapleader = ",";
+      mapleader = " ";
       splitbelow = true;
       splitright = true;
     };
