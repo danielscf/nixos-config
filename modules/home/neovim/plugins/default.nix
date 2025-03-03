@@ -10,6 +10,7 @@
     # ./lualine.nix
     ./dressing.nix
     ./marks.nix
+    ./markdown-preview.nix
     ./leap.nix
     ./image.nix
     ./trouble.nix
