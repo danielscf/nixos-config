@@ -1,4 +1,4 @@
-{helpers, ...}: {
+{
   programs.nixvim = {
     plugins.luasnip = {
       enable = true;
@@ -20,39 +20,40 @@
       settings = {
       };
     };
+
+    keymaps = [
+      {
+        key = "<Tab>";
+        action = ''
+          require("luasnip").expand_or_jump()
+        '';
+        mode = ["i"];
+        options.silent = true;
+      }
+      {
+        key = "<Tab>";
+        action = ''
+          require("luasnip").jump(1)
+        '';
+        mode = ["i" "s"];
+        options.silent = true;
+      }
+      {
+        key = "<S-Tab>";
+        action = ''
+          require("luasnip").jump(-1)
+        '';
+        mode = ["i" "s"];
+        options.silent = true;
+      }
+      {
+        key = "<C-E>";
+        action = ''
+          require("luasnip").change_choice(1)
+        '';
+        mode = ["i" "s"];
+        options.silent = true;
+      }
+    ];
   };
-  keymaps = [
-    {
-      key = "<Tab>";
-      action = helpers.mkRaw ''
-        require("luasnip").expand_or_jump()
-      '';
-      mode = ["i"];
-      options.silent = true;
-    }
-    {
-      key = "<Tab>";
-      action = helpers.mkRaw ''
-        require("luasnip").jump(1)
-      '';
-      mode = ["i" "s"];
-      options.silent = true;
-    }
-    {
-      key = "<S-Tab>";
-      action = helpers.mkRaw ''
-        require("luasnip").jump(-1)
-      '';
-      mode = ["i" "s"];
-      options.silent = true;
-    }
-    {
-      key = "<C-E>";
-      action = helpers.mkRaw ''
-        require("luasnip").change_choice(1)
-      '';
-      mode = ["i" "s"];
-      options.silent = true;
-    }
-  ];
 }
