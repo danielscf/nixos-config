@@ -17,7 +17,7 @@
     ./noice.nix
     ./leap.nix
     ./image.nix
-    ./obsidian.nix
+    # ./obsidian.nix
     ./trouble.nix
     ./todo-comments.nix
     ./nvim-surround.nix
@@ -30,7 +30,7 @@
 
     ./lsp/lsp.nix
     ./lsp/lint.nix
-    ./lsp/java.nix
+    # ./lsp/java.nix
     ./lsp/blink-cmp.nix
     ./lsp/conform-nvim.nix
     ./lsp/treesitter.nix
