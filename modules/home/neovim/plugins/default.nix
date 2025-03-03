@@ -13,6 +13,7 @@
     ./dressing.nix
     ./marks.nix
     ./markdown-preview.nix
+    ./mini.nix
     ./notify.nix
     ./noice.nix
     ./leap.nix
