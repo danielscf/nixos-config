@@ -10,7 +10,7 @@
         };
       };
       # fuzzy.implementation = "prefer_rust";
-      signature.enable = true;
+      signature.enabled = true;
 
       sources = {
         default = ["lsp" "buffer" "snippets" "path"];
