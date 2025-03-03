@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  home.activation.ensureDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.nixvimDirTheme = lib.hm.dag.entryAfter ["writeBoundary"] ''
     mkdir -p ~/.config/colors/
     touch ~/.config/colors/stylix.lua
   '';
