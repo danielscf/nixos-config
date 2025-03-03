@@ -5,8 +5,8 @@
       ui.enable = false;
       workspaces = [
         {
-          name = "buf-parent";
-	  path = "~/notes";
+          name = "work";
+          path = "~/notes";
         }
       ];
       mappings = {

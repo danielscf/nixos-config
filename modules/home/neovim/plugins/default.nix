@@ -8,7 +8,7 @@
     ./tmux-navigator.nix
     ./neoscroll.nix
     ./harpoon.nix
-    # ./lualine.nix
+    ./lualine.nix
     ./luasnip.nix
     ./dressing.nix
     ./marks.nix
@@ -17,7 +17,7 @@
     ./noice.nix
     ./leap.nix
     ./image.nix
-    # ./obsidian.nix
+    ./obsidian.nix
     ./trouble.nix
     ./todo-comments.nix
     ./nvim-surround.nix
