@@ -24,7 +24,10 @@
         graphql = ["prettierd"];
         lua = ["stylua"];
         python = ["black"];
-        nix = ["alejandra"];
+        nix = [
+          "alejandra"
+          "nixfmt"
+        ];
       };
 
       formatters = {
