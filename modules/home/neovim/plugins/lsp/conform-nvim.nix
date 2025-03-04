@@ -8,7 +8,7 @@
     keymaps = [
       {
         key = "<leader>fo";
-        action = ''
+        action.__raw = ''
           function()
             require("conform").format({
               lsp_fallback = true,
