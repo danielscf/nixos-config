@@ -29,8 +29,8 @@
 
       autoindent = true;
       expandtab = true;
-      tabstop = 4;
-      softtabstop = 4;
+      tabstop = 2;
+      softtabstop = 2;
 
       ignorecase = true;
       smartcase = true;
