@@ -239,6 +239,8 @@
         mode = [ "n" ];
         options.desc = "Open file";
       }
+
+      # TODO: Navigate through tabs?
     ];
   };
 }

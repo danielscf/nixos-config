@@ -4,32 +4,47 @@
   ...
 }:
 {
-  programs.nixvim.plugins.lint = {
-    enable = true;
+  programs.nixvim = {
+    plugins.lint = {
+      enable = true;
 
-    linters = {
-      ruff.cmd = lib.getExe pkgs.ruff;
-      selene.cmd = lib.getExe pkgs.selene;
-      eslint_d.cmd = lib.getExe pkgs.eslint_d;
-      shellcheck.cmd = lib.getExe pkgs.shellcheck;
-      djlint.cmd = lib.getExe pkgs.djlint;
+      linters = {
+        ruff.cmd = lib.getExe pkgs.ruff;
+        selene.cmd = lib.getExe pkgs.selene;
+        eslint_d.cmd = lib.getExe pkgs.eslint_d;
+        shellcheck.cmd = lib.getExe pkgs.shellcheck;
+        djlint.cmd = lib.getExe pkgs.djlint;
+      };
+
+      lintersByFt = {
+        javascript = [ "eslint_d" ];
+        typescript = [ "eslint_d" ];
+        javascriptreact = [ "eslint_d" ];
+        typescriptreact = [ "eslint_d" ];
+        svelte = [ "eslint_d" ];
+
+        sh = [ "shellcheck" ];
+        bash = [ "shellcheck" ];
+
+        python = [ "ruff" ];
+        htmldjango = [ "djlint" ];
+
+        lua = [ "selene" ];
+        nix = [ "nix" ];
+      };
     };
 
-    lintersByFt = {
-      javascript = [ "eslint_d" ];
-      typescript = [ "eslint_d" ];
-      javascriptreact = [ "eslint_d" ];
-      typescriptreact = [ "eslint_d" ];
-      svelte = [ "eslint_d" ];
-
-      sh = [ "shellcheck" ];
-      bash = [ "shellcheck" ];
-
-      python = [ "ruff" ];
-      htmldjango = [ "djlint" ];
-
-      lua = [ "selene" ];
-      nix = [ "nix" ];
-    };
+    keymaps = [
+      {
+        key = "<leader>fl";
+        action.__raw = ''
+          function()
+            require("lint").try_lint()
+          end
+        '';
+        mode = [ "n" ];
+        options.desc = "Lint file";
+      }
+    ];
   };
 }
