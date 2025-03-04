@@ -5,7 +5,8 @@
   lib,
   inputs,
   ...
-}: {
+}:
+{
   programs.home-manager.enable = true;
 
   home = {
@@ -36,6 +37,7 @@
       via
       hyprshot
       obsidian
+      lenovo-legion
 
       nemo
       vscode
