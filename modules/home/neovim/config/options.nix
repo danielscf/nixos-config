@@ -27,6 +27,11 @@
       smartindent = true;
       fillchars.eob = " ";
 
+      autoindent = true;
+      expandtab = true;
+      tabstop = 4;
+      softtabstop = 4;
+
       ignorecase = true;
       smartcase = true;
 
