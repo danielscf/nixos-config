@@ -1,10 +1,5 @@
 {
   programs.nixvim = {
-    colorschemes.base16 = {
-      enable = true;
-      settings.telescope_borders = true;
-    };
-
     clipboard.register = "unnamedplus";
 
     withNodeJs = true;
@@ -12,35 +7,39 @@
     withPython3 = true;
     withRuby = true;
 
+    colorschemes.base16 = {
+      enable = true;
+      settings.telescope_borders = true;
+    };
+
     globals = {
-      mapleader = " ";
       splitbelow = true;
       splitright = true;
     };
 
     opts = {
+      mouse = "a";
+      laststatus = 3;
+      fillchars.eob = " ";
       termguicolors = true;
 
       number = true;
-      relativenumber = true;
       shiftwidth = 2;
+      undofile = true;
+      timeoutlen = 300;
       smartindent = true;
-      fillchars.eob = " ";
+      relativenumber = true;
 
-      autoindent = true;
-      expandtab = true;
       tabstop = 2;
       softtabstop = 2;
+      expandtab = true;
+      autoindent = true;
 
       ignorecase = true;
       smartcase = true;
 
       spell = true;
       spelllang = "en_us";
-
-      mouse = "a";
-
-      undofile = true;
 
       sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions";
     };
