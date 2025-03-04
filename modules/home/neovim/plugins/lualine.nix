@@ -1,8 +1,8 @@
-{builtins, ...}:{
+{
   programs.nixvim.plugins.lualine = {
     enable = true;
 
-    luaConfig.post = builtins.readFile ./themes/lualine_base16.lua;
+    luaConfig.post = builtins.readFile ./themes/lualine-base16.lua;
 
     settings = {
       options = {
