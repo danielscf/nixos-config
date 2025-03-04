@@ -2,23 +2,26 @@
   programs.nixvim.autoCmd = [
     {
       event = [ "BufEnter" ];
-      callback = ''
-        function ()
-          vim.opt.formatoptions:remove({ "c", "r", "o" })
-        end
-      '';
+      callback = {
+        __raw = ''
+          function ()
+            vim.opt.formatoptions:remove({ "c", "r", "o" })
+          end
+        '';
+      };
       desc = "Disable new comment line";
     }
     {
       event = [ "BufWinEnter" ];
-      pattern = [ "*" ];
-      callback = ''
-        function ()
-          if vim.bo[event.buf].filetype == "help" then
-            vim.cmd.only()
+      callback = {
+        __raw = ''
+          function (event)
+            if vim.bo[event.buf].filetype == "help" then
+              vim.cmd.only()
+            end
           end
-        end
-      '';
+        '';
+      };
       desc = "Open help page on a buffer";
     }
   ];
