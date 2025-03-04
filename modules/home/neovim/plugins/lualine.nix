@@ -1,22 +1,8 @@
-{
+{builtins, ...}:{
   programs.nixvim.plugins.lualine = {
     enable = true;
 
-    luaConfig.post = ''
-      local base16_colors = require('base16-colorscheme').colors
-      local custom_base16 = require('lualine.themes.base16')
-
-      custom_base16.normal.a.bg = base16_colors.base00
-      custom_base16.normal.a.fg = base16_colors.base06
-
-      custom_base16.normal.b.bg = base16_colors.base00
-      custom_base16.normal.b.fg = base16_colors.base06
-
-      custom_base16.normal.c.bg = base16_colors.base00
-      custom_base16.normal.c.fg = base16_colors.base06
-
-      require('lualine').setup { options = { theme  = custom_base16 },}
-    '';
+    luaConfig.post = builtins.readFile ./themes/lualine_base16.lua;
 
     settings = {
       options = {
@@ -31,15 +17,31 @@
           right = "";
         };
         disabled_filetypes = {
-          statusline = ["help" "lazy" "trouble"];
-          tabline = ["help" "lazy" "trouble"];
-          winbar = ["help" "lazy" "trouble"];
+          statusline = [
+            "help"
+            "lazy"
+            "trouble"
+          ];
+          tabline = [
+            "help"
+            "lazy"
+            "trouble"
+          ];
+          winbar = [
+            "help"
+            "lazy"
+            "trouble"
+          ];
         };
-        ignore_focus = ["help" "lazy" "trouble"];
+        ignore_focus = [
+          "help"
+          "lazy"
+          "trouble"
+        ];
       };
 
       tabline = {
-        lualine_z = ["tabs"];
+        lualine_z = [ "tabs" ];
       };
       sections = {
         lualine_a = [
@@ -74,8 +76,8 @@
             };
           }
         ];
-        lualine_c = [""];
-        lualine_x = ["searchcount"];
+        lualine_c = [ "" ];
+        lualine_x = [ "searchcount" ];
         lualine_y = [
           {
             __unkeyed-1 = "diff";
@@ -87,7 +89,7 @@
           }
           "branch"
         ];
-        lualine_z = ["mode"];
+        lualine_z = [ "mode" ];
       };
     };
   };
