@@ -1,8 +1,6 @@
 {
-  config,
   system,
   pkgs,
-  lib,
   inputs,
   ...
 }:
@@ -39,7 +37,8 @@
       via
       hyprshot
       obsidian
-      lenovo-legion
+
+      # lenovo-legion
 
       nemo
       vscode
