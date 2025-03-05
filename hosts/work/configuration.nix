@@ -54,7 +54,9 @@
 
   services.libinput.enable = true;
 
-  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.bash;
+
+  programs.zsh.enable = true;
 
   users.users.daniel = {
     isNormalUser = true;

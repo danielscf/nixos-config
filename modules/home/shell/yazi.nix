@@ -1,13 +1,13 @@
 {
-  config,
-  pkgs,
   system,
   inputs,
   ...
-}: let
+}:
+let
   pluginsModule = inputs.nix-yazi-plugins.legacyPackages.${system}.homeManagerModules.default;
   pluginsPkg = inputs.nix-yazi-plugins.packages.${system};
-in {
+in
+{
   # TODO: Evaluate if this import should be moved
   # TODO: Create bookmark plugin
   imports = [
@@ -18,6 +18,7 @@ in {
     enable = true;
 
     enableBashIntegration = true;
+    enableZshIntegration = true;
     enableNushellIntegration = true;
     shellWrapperName = "y";
 
@@ -31,8 +32,6 @@ in {
         show_symlink = true;
       };
     };
-
-    # initLua =
 
     plugins = {
       system-clipboard = pluginsPkg.system-clipboard;
@@ -59,18 +58,24 @@ in {
     keymap = {
       manager.append_keymap = [
         {
-          on = ["g" "e"];
+          on = [
+            "g"
+            "e"
+          ];
           run = "cd /mnt/external";
           desc = "Go to external drive";
         }
         {
-          on = ["g" "E"];
+          on = [
+            "g"
+            "E"
+          ];
           run = "cd /mnt/external/arch_bkp/dotfiles/.config/";
           desc = "Go to external drive dotfiles";
         }
         {
           on = "<C-y>";
-          run = ["plugin system-clipboard"];
+          run = [ "plugin system-clipboard" ];
         }
       ];
     };
