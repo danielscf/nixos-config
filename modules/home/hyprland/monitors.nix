@@ -1,10 +1,4 @@
 {
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
   wayland.windowManager.hyprland.settings = {
     # TODO: Switch between setups if main external is detected on startup
 

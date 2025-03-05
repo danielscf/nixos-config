@@ -51,6 +51,7 @@
   };
 
   imports = [
+    ../../modules/home/hyprland
     ../../modules/home/nixvim
 
     ../../modules/home/desktop/stylix.nix
@@ -68,8 +69,6 @@
     ../../modules/home/desktop/qt.nix
     ../../modules/home/desktop/imv.nix
     ../../modules/home/desktop/obs-studio.nix
-
-    ../../modules/home/hyprland/hyprland.nix
 
     ../../modules/home/shell/bash.nix
     ../../modules/home/shell/nushell.nix

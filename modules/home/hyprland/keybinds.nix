@@ -1,10 +1,14 @@
 {
-  config,
   pkgs,
   lib,
-  inputs,
   ...
-}: {
+}:
+let
+  hyprshot = lib.getExe pkgs.hyprshot;
+  swaync-client = lib.getExe pkgs.swannc "swaync-client";
+  swayosd-client = lib.getExe pkgs.swayosd "swayosd-client";
+in
+{
   wayland.windowManager.hyprland.settings = {
     bind = [
       # Basic keybinds
@@ -17,6 +21,8 @@
       "$mainMod, T, exec, $terminal"
       "$mainMod, E, exec, $file_manager"
       "$mainMod, B, exec, $browser"
+
+      # TODO: Translate scripts
       #"$mainMod, C, exec, $scripts/theme-change"
       #"$mainMod, W, exec, $scripts/theme-reload"
       #"$mainMod, Z, exec, $scripts/zen"
@@ -25,12 +31,12 @@
       #"$mainMod, F2, exec, $scripts/script-aliases/bt-audio"
 
       # Swaync
-      "$mainMod, N, exec, swaync-client -t -sw"
+      "$mainMod, N, exec, ${swaync-client} -t -sw"
 
       # Hyprshot
-      ", PRINT, exec, hyprshot -m output"
-      "$mainMod, PRINT, exec, hyprshot -m region"
-      "$shiftMod, PRINT, exec, hyprshot -m window"
+      ", PRINT, exec, ${hyprshot} -m output"
+      "$mainMod, PRINT, exec, ${hyprshot} -m region"
+      "$shiftMod, PRINT, exec, ${hyprshot} -m window"
     ];
 
     # Move/re-size windows with mainMod + LMB/RMB and dragging
@@ -41,18 +47,18 @@
 
     # Swayosd
     bindr = [
-      "CAPS, Caps_Lock, exec, swayosd-client --caps-lock"
-      "MOD2, Num_Lock, exec, swayosd-client --num-lock"
+      "CAPS, Caps_Lock, exec, ${swayosd-client} --caps-lock"
+      "MOD2, Num_Lock, exec, ${swayosd-client} --num-lock"
     ];
 
     binde = [
       # Swayosd
-      ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise"
-      ", XF86AudioLowerVolume, exec, swayosd-client --output-volume lower"
-      ", XF86AudioMute, exec, swayosd-client --ouput-volume mute-toggle"
-      "$mainMod, XF86AudioMute, exec, swayosd-client --input-volume mute-toggle"
-      #"$mainMod, XF86AudioLowerVolume, exec, swayosd-client --brightness lower"
-      #"$mainMod, XF86AudioRaiseVolume, exec, swayosd-client --brightness raise"
+      ", XF86AudioRaiseVolume, exec, ${swayosd-client} --output-volume raise"
+      ", XF86AudioLowerVolume, exec, ${swayosd-client} --output-volume lower"
+      ", XF86AudioMute, exec, ${swayosd-client} --ouput-volume mute-toggle"
+      "$mainMod, XF86AudioMute, exec, ${swayosd-client} --input-volume mute-toggle"
+      "$mainMod, XF86AudioLowerVolume, exec, ${swayosd-client} --brightness lower"
+      "$mainMod, XF86AudioRaiseVolume, exec, ${swayosd-client} --brightness raise"
 
       # Window focus
       "$mainMod, left, hy3:movefocus, l"

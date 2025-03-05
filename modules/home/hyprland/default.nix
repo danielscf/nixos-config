@@ -1,11 +1,11 @@
 {
-  config,
   system,
   pkgs,
   lib,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ./keybinds.nix
     ./monitors.nix
@@ -29,41 +29,37 @@
       "$secondary_monitor" = "DP-1";
       "$laptop_monitor" = "eDP-1";
 
-      "$file_manager" = "nemo";
-      "$terminal" = "ghostty";
-      "$launcher" = "rofi -show drun";
-      "$browser" = "zen-beta";
-
       "$mainMod" = "SUPER";
+
+      "$browser" = "zen-beta";
+      "$terminal" = "${lib.getExe pkgs.ghostty}";
+      "$file_manager" = "${lib.getExe pkgs.nemo}";
+      "$launcher" = "${lib.getExe pkgs.rofi-wayland} -show drun";
 
       exec-once = [
         # TODO: Replace with pkgs
-        "swaync"
-        "swww-daemon"
-        "swayosd-server"
-        "waybar &"
-        "wl-paste --type text --watch cliphist store"
-        "wl-paste --type image --watch cliphist store"
+        "${lib.getExe pkgs.swaync}"
+        "${lib.getExe pkgs.waybar}"
+        "${lib.getExe pkgs.swww "swww-daemon"}"
+        "${lib.getExe pkgs.swayosd "swayosd-server"}"
+        "${lib.getExe pkgs.wl-clipboard "wl-paste"} --type text --watch cliphist store"
+        "${lib.getExe pkgs.wl-clipboard "wl-paste"} --type image --watch cliphist store"
 
         "[workspace 2 silent] $browser"
-        "[workspace 3 silent] obsidian --disable-gpu"
-        #"[workspace 3 silent] $scripts/script-aliases/obsidian-default-vault"
-        #"[workspace 4 silent] systemctl --user start docker-desktop"
-        "[workspace 5 silent] youtube-music"
-        #"[workspace 5 silent] $scripts/script-aliases/foobar2000"
-        #"[workspace 8 silent] whatsie"
-        "[workspace 8 silent] discord"
+        "[workspace 3 silent] ${lib.getExe pkgs.obsidian} --disable-gpu"
+        #"[workspace 4 silent] $scripts/script-aliases/foobar2000"
+        "[workspace 5 silent] ${lib.getExe pkgs.youtube-music}"
+        "[workspace 8 silent] ${lib.getExe pkgs.discord}"
+        "[workspace 9 silent] ${lib.getExe pkgs.whatsie}"
       ];
 
       env = [
-        # TODO: Replace path with XDG_HOME
-        "HYPRSHOT_DIR,/home/daniel/Pictures/screenshots"
         # "GSK_RENDERER,ngl"
         # "GDK_SCALE,1"
         # "GDK_BACKEND,wayland"
-        # "SDL_VIDEODRIVER,wayland"
         # "MOZ_ENABLE_WAYLAND,1"
-        # "WLR_RENDERER_ALLOW_SOFTWARE=1"
+
+        "HYPRSHOT_DIR,$HOME/Pictures/screenshots"
         "QT_QPA_PLATFORM,wayland"
         "CLUTTER_BACKEND,wayland"
         "GBM_BACKEND,nvidia-drm"

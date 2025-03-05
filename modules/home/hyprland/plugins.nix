@@ -1,10 +1,4 @@
 {
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
   wayland.windowManager.hyprland.settings.plugin = {
     hy3 = {
       no_gaps_when_only = 0;
