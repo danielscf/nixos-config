@@ -5,8 +5,12 @@
       ui.enable = false;
       workspaces = [
         {
-          name = "work";
-          path = "~/notes";
+          name = "buf-parent";
+          path.__raw = ''
+            function()
+              return assert(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))
+            end
+          '';
         }
       ];
       mappings = {
