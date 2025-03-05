@@ -89,5 +89,6 @@
     ../../modules/home/shell/ncspot.nix
     ../../modules/home/shell/yt-dlp.nix
     ../../modules/home/shell/eza.nix
+    ../../modules/home/shell/bat.nix
   ];
 }
