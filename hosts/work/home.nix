@@ -81,6 +81,7 @@
     ../../modules/home/shell/ripgrep.nix
     ../../modules/home/shell/fzf.nix
     ../../modules/home/shell/fd.nix
+    ../../modules/home/shell/jq.nix
     ../../modules/home/shell/btop.nix
     ../../modules/home/shell/cmus.nix
     ../../modules/home/shell/fastfetch.nix
