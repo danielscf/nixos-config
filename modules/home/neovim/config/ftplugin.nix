@@ -1,6 +1,6 @@
 {
   programs.nixvim.extraFiles = {
-    "ftplugin/markdown.lua" = import ../ftplugin/markdown.nix;
-    "ftplugin/python.lua" = import ../ftplugin/python.nix;
+    "ftplugin/markdown.lua".text = import ../ftplugin/markdown.nix;
+    "ftplugin/python.lua".text = import ../ftplugin/python.nix;
   };
 }
