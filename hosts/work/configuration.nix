@@ -1,11 +1,10 @@
 {
-  config,
   system,
-  lib,
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
@@ -35,7 +34,10 @@
 
   nix.settings = {
     auto-optimise-store = true;
-    experimental-features = ["nix-command" "flakes"];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 
   networking.hostName = "nixos";
@@ -76,14 +78,11 @@
     home-manager
 
     gcc
-    rustup
     python313
-
-    xdg-user-dirs
   ];
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs system;};
+    extraSpecialArgs = { inherit inputs system; };
 
     backupFileExtension = "bkp";
     useUserPackages = true;

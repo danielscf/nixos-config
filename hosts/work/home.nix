@@ -18,6 +18,7 @@
       cht-sh
       cmatrix
       ntfs3g
+      xdg-user-dirs
       unrar
       unzip
       vlc
@@ -33,6 +34,7 @@
       youtube-music
       bottles
       glib
+      rustup
       libnotify
       via
       hyprshot
@@ -87,7 +89,5 @@
     ../../modules/home/shell/fastfetch.nix
     ../../modules/home/shell/ncspot.nix
     ../../modules/home/shell/yt-dlp.nix
-
-    ../../modules/home/neovim/nixvim.nix
   ];
 }
