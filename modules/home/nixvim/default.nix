@@ -7,6 +7,8 @@
     ./plugins
   ];
 
+  # TODO: Default option if stylix module not available
+
   programs.nixvim = {
     enable = true;
     defaultEditor = true;

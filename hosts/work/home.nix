@@ -50,6 +50,8 @@
   };
 
   imports = [
+    ../../modules/home/nixvim
+
     ../../modules/home/desktop/stylix.nix
     ../../modules/home/desktop/rofi.nix
     ../../modules/home/desktop/firefox.nix
