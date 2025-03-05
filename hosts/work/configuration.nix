@@ -79,11 +79,7 @@
     rustup
     python313
 
-    # TODO: Organize this packages on hyprland
-    kitty
     xdg-user-dirs
-    wl-clipboard
-    cliphist
   ];
 
   home-manager = {
