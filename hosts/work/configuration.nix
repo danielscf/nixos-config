@@ -54,7 +54,7 @@
 
   services.libinput.enable = true;
 
-  users.defaultUserShell = pkgs.bash;
+  users.defaultUserShell = pkgs.zsh;
 
   users.users.daniel = {
     isNormalUser = true;
@@ -65,7 +65,7 @@
       "storage"
       "video"
     ];
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
   };
 
   environment.systemPackages = with pkgs; [

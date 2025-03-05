@@ -38,7 +38,7 @@
       hyprshot
       obsidian
 
-      # lenovo-legion
+      lenovo-legion
 
       nemo
       vscode
@@ -72,6 +72,7 @@
 
     ../../modules/home/shell/bash.nix
     ../../modules/home/shell/nushell.nix
+    ../../modules/home/shell/zsh.nix
     ../../modules/home/shell/zoxide.nix
     ../../modules/home/shell/yazi.nix
     ../../modules/home/shell/carapace.nix

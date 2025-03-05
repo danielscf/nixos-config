@@ -37,7 +37,6 @@
       "$launcher" = "${lib.getExe pkgs.rofi-wayland} -show drun";
 
       exec-once = [
-        # TODO: Replace with pkgs
         "${lib.getExe pkgs.waybar}"
         "${lib.getExe' pkgs.swww "swww-daemon"}"
         "${lib.getExe' pkgs.swayosd "swayosd-server"}"
@@ -54,13 +53,10 @@
       ];
 
       env = [
-        # "GSK_RENDERER,ngl"
-        # "GDK_SCALE,1"
-        # "GDK_BACKEND,wayland"
-        # "MOZ_ENABLE_WAYLAND,1"
-
         "HYPRSHOT_DIR,$HOME/Pictures/screenshots"
-        "QT_QPA_PLATFORM,wayland"
+        "GSK_RENDERER,ngl"
+        "GDK_BACKEND,wayland"
+        "QT_QPA_PLATFORM,wayland;xcb"
         "CLUTTER_BACKEND,wayland"
         "GBM_BACKEND,nvidia-drm"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
