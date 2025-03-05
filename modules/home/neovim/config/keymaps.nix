@@ -80,7 +80,7 @@
       }
       {
         key = "<A-k>";
-        action = "<cmd>m .+2<cr>==";
+        action = "<cmd>m .-2<cr>==";
         mode = [ "n" ];
       }
       {
