@@ -88,5 +88,6 @@
     ../../modules/home/shell/fastfetch.nix
     ../../modules/home/shell/ncspot.nix
     ../../modules/home/shell/yt-dlp.nix
+    ../../modules/home/shell/eza.nix
   ];
 }
