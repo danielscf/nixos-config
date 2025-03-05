@@ -38,12 +38,12 @@
 
       exec-once = [
         # TODO: Replace with pkgs
-        "${lib.getExe pkgs.swaync}"
         "${lib.getExe pkgs.waybar}"
-        "${lib.getExe pkgs.swww "swww-daemon"}"
-        "${lib.getExe pkgs.swayosd "swayosd-server"}"
-        "${lib.getExe pkgs.wl-clipboard "wl-paste"} --type text --watch cliphist store"
-        "${lib.getExe pkgs.wl-clipboard "wl-paste"} --type image --watch cliphist store"
+        "${lib.getExe' pkgs.swww "swww-daemon"}"
+        "${lib.getExe' pkgs.swayosd "swayosd-server"}"
+        "${lib.getExe' pkgs.swaynotificationcenter "swaync"}"
+        "${lib.getExe' pkgs.wl-clipboard "wl-paste"} --type text --watch cliphist store"
+        "${lib.getExe' pkgs.wl-clipboard "wl-paste"} --type image --watch cliphist store"
 
         "[workspace 2 silent] $browser"
         "[workspace 3 silent] ${lib.getExe pkgs.obsidian} --disable-gpu"

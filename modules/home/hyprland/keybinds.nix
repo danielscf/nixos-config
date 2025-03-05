@@ -5,8 +5,8 @@
 }:
 let
   hyprshot = lib.getExe pkgs.hyprshot;
-  swaync-client = lib.getExe pkgs.swannc "swaync-client";
-  swayosd-client = lib.getExe pkgs.swayosd "swayosd-client";
+  swaync-client = lib.getExe' pkgs.swaynotificationcenter "swaync-client";
+  swayosd-client = lib.getExe' pkgs.swayosd "swayosd-client";
 in
 {
   wayland.windowManager.hyprland.settings = {
