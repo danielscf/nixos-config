@@ -16,6 +16,10 @@
           group = "Buffer";
         }
         {
+          __unkeyed-1 = "<leader>d";
+          group = "Dap/Db";
+        }
+        {
           __unkeyed-1 = "<leader>e";
           group = "Editor";
         }
