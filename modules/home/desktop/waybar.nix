@@ -1,8 +1,5 @@
+{ config, ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
   programs.waybar = {
     enable = true;
     settings = [
@@ -10,7 +7,10 @@
         layer = "top";
         position = "top";
         height = 55;
-        output = ["eDP-1" "HDMI-A-1"];
+        output = [
+          "eDP-1"
+          "HDMI-A-1"
+        ];
         reload_style_on_change = true;
 
         modules-left = [
@@ -18,7 +18,7 @@
           "mpris"
           "tray"
         ];
-        modules-center = [];
+        modules-center = [ ];
         modules-right = [
           "bluetooth"
           "privacy"
@@ -69,7 +69,10 @@
           player = "playerctld";
           max-length = 60;
           format = " {status_icon}  {player_icon}  {dynamic}";
-          dynamic-order = ["title" "artist"];
+          dynamic-order = [
+            "title"
+            "artist"
+          ];
           player-icons = {
             "default" = "";
             "vlc" = "󰕼";
@@ -104,7 +107,19 @@
           format-charging = " {capacity}%";
           format-plugged = " {capacity}%";
           format-alt = "{time} {icon}";
-          format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+          format-icons = [
+            "󰂎"
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
         };
         clock = {
           format = " {:%I:%M %p |  %d/%m}";
@@ -140,7 +155,12 @@
             phone = "";
             portable = "";
             car = "";
-            default = ["" "" "󰕾" " "];
+            default = [
+              ""
+              ""
+              "󰕾"
+              " "
+            ];
           };
         };
 

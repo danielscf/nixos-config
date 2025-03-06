@@ -1,10 +1,6 @@
+{ lib, ... }:
 {
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
-  home.activation.ensureDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.ensureDirs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     mkdir -p ~/Pictures/screenshots \
       ~/Pictures/wallpapers \
       ~/Videos/recording \
