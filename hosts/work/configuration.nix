@@ -22,7 +22,6 @@
     ../../modules/core/firewall.nix
     ../../modules/core/nvidia.nix
     ../../modules/core/hyprland.nix
-    ../../modules/core/stylix.nix
     ../../modules/core/gnupg.nix
     ../../modules/core/udisks2.nix
     ../../modules/core/playerctld.nix
@@ -64,9 +63,9 @@
     initialPassword = "12345";
     extraGroups = [
       "wheel"
-      "networkmanager"
-      "storage"
       "video"
+      "storage"
+      "networkmanager"
     ];
     shell = pkgs.zsh;
   };
