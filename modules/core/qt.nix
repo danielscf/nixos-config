@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   qt.enable = true;
-  # qt.platformTheme = "gnome"; # This is set by stylix
+  # qt.platformTheme = "qtct"; # This is set by stylix
 
   environment.systemPackages = [
     pkgs.libsForQt5.qt5.qtbase
