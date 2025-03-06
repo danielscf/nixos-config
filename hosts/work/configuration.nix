@@ -30,6 +30,7 @@
     ../../modules/core/blueman.nix
     ../../modules/core/security.nix
     ../../modules/core/external_drive.nix
+    ../../modules/core/qt.nix
   ];
 
   nix.settings = {

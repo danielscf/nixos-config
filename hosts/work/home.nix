@@ -66,7 +66,6 @@
     ../../modules/home/desktop/swayosd.nix
     ../../modules/home/desktop/xdg-user-dirs.nix
     ../../modules/home/desktop/gtk.nix
-    ../../modules/home/desktop/qt.nix
     ../../modules/home/desktop/imv.nix
     ../../modules/home/desktop/obs-studio.nix
 
