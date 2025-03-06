@@ -42,6 +42,7 @@
 
       nemo
       vscode
+      inputs.stylix.homeManagerModules.stylix
       inputs.zen-browser.packages.${system}.beta
     ];
 
