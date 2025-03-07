@@ -15,10 +15,7 @@
     packages = with pkgs; [
       cht-sh
       cmatrix
-      ntfs3g
       xdg-user-dirs
-      unrar
-      unzip
       vlc
       zoom-us
       swww
@@ -30,16 +27,11 @@
       tenacity
       mupdf
       youtube-music
-      glib
-      rustup
-      libnotify
       via
       hyprshot
       obsidian
       deadbeef
       stremio
-
-      lenovo-legion
 
       nemo
       vscode

@@ -80,7 +80,16 @@
     home-manager
 
     gcc
+    ntfs3g
+    unrar
+    glib
+    rustup
+    libnotify
+    gnumake
+    unzip
     python313
+
+    lenovo-legion
   ];
 
   home-manager = {
