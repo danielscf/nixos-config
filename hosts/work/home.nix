@@ -32,7 +32,6 @@
       obsidian
       deadbeef
       stremio
-
       nemo
       vscode
       inputs.zen-browser.packages.${system}.beta

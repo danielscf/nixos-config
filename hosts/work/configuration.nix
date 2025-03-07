@@ -88,8 +88,6 @@
     gnumake
     unzip
     python313
-
-    lenovo-legion
   ];
 
   home-manager = {
