@@ -47,7 +47,7 @@
   # TODO: Create module?
   time = {
     timeZone = "America/Lima";
-    hardwareClockInLocalTime = true;
+    # hardwareClockInLocalTime = true;
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
