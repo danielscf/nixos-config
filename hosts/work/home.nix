@@ -30,7 +30,6 @@
       tenacity
       mupdf
       youtube-music
-      bottles
       glib
       rustup
       libnotify
