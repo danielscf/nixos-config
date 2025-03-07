@@ -1,5 +1,4 @@
 {
-  # config,
   pkgs,
   lib,
   ...
@@ -26,7 +25,7 @@
       rofi-emoji-wayland
     ];
 
-    theme = import ./rofi/theme.rasi;
+    theme = import ./rofi-theme.nix;
 
     # theme =
     #   let

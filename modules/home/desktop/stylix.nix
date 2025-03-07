@@ -17,6 +17,7 @@
 
     targets = {
       tmux.enable = false;
+      rofi.enable = false;
 
       nixvim = {
         enable = true;
