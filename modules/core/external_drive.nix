@@ -3,7 +3,7 @@
     # WARNING: Hard-coded UUID
     device = "/dev/disk/by-uuid/68A8D5B3A8D5804C";
 
-    fsType = "ntfs3";
+    fsType = "ntfs-3g";
     options = [
       "defaults"
       "users"
@@ -12,6 +12,8 @@
       "gid=100"
       "uid=1000"
       "windows_names"
+      "x-systemd.automount"
+      "x-systemd.idle-timeout=600"
     ];
   };
 
