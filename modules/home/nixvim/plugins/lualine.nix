@@ -77,7 +77,17 @@
           }
         ];
         lualine_c = [ "" ];
-        lualine_x = [ "searchcount" ];
+        lualine_x = [
+          "searchcount"
+          {
+            __unkeyed-1.__raw = ''
+              require("noice").api.statusline.mode.get
+            '';
+            cond.__raw = ''
+              require("noice").api.statusline.mode.has
+            '';
+          }
+        ];
         lualine_y = [
           {
             __unkeyed-1 = "diff";
