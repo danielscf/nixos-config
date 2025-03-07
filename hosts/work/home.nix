@@ -37,6 +37,7 @@
       via
       hyprshot
       obsidian
+      deadbeef
 
       lenovo-legion
 
