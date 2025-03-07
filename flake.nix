@@ -48,11 +48,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    grub2-themes = {
-      url = "github:vinceliuice/grub2-themes";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -75,7 +70,6 @@
         modules = [
           ./hosts/work/configuration.nix
           inputs.home-manager.nixosModules.default
-          inputs.grub2-themes.nixosModules.default
         ];
       };
 

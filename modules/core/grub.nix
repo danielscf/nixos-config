@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}:
+{ pkgs, ... }:
 {
   # TODO: Ask if efi/bios
   # TODO: Ask if encryption
@@ -43,13 +39,7 @@
         enableCryptodisk = false;
 
         splashImage = null;
-        # theme = "${pkgs.catppuccin-grub}";
-      };
-
-      grub2-theme = {
-        enable = true;
-        theme = "vimix";
-        footer = true;
+        theme = "${pkgs.catppuccin-grub}";
       };
     };
   };
