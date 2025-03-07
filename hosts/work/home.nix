@@ -38,6 +38,7 @@
       hyprshot
       obsidian
       deadbeef
+      stremio
 
       lenovo-legion
 
